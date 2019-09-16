@@ -1,0 +1,27 @@
+{extend name="index_layout"/}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="__STATIC__/libs/mmgrid/mmGrid.css" />
+{/block}
+{block name="script"}
+<script src="__STATIC__/libs/mmgrid/mmGrid.js" type="text/javascript"></script>
+<script src="__STATIC__/admin/js/ranks.js" type="text/javascript"></script>
+{/block}
+{block name="main"}
+
+<div class="layui-card">
+    <div class="layui-card-header">会员等级管理</div>
+    <div class="layui-card-body">
+        <div class="layui-form">
+            <table class="layui-hide" id="table" lay-filter="table"></table>
+        </div>
+    </div>
+</div>
+<div class="layui-btn-container">
+    <a class="layui-btn layui-btn-sm" onclick="javascript:location.href='{:Url(\'/admin/user/toEditRanks\',\'p=\'.$p)}'">新增会员等级</a>
+</div>
+<div id="mmg" class="mmg"></div>
+<div id="pg" style="text-align: right;"></div>
+<script>
+  $(function(){initGrid({$p})});
+</script>
+{/block}

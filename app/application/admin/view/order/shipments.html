@@ -1,0 +1,56 @@
+{extend name="index_layout"/}
+{block name="script"}
+<script src="__STATIC__/admin/js/order.js" type="text/javascript"></script>
+{/block}
+{block name="main"}
+<div class="layui-card">
+    <div class="layui-card-body">
+       
+         <input type="hidden" name="orderId" id="orderId" class="ipt" value="{$orderId}" />
+        <form id="expressForm">
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="width: auto;">快递名称 </label>
+                <div class="layui-input-inline w300">
+                  <select id="expressCode" name="expressCode" class='ipt' maxLength='20'>
+                  <option value="">-请选择-</option>
+                  {volist name=":PYGGetExpressDatas()" id='vo'}
+                  <option value="{$vo['expressName']}">{$vo['expressName']}</option>
+                  {/volist}
+                  </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="width: auto;">快递单号 </label>
+                <div class="layui-input-inline w300">
+                    <input type="text" name="tracking" id="tracking" placeholder="快递单号" class="ipt" />
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" type="submit">立即发货</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+$(function(){
+  $('#expressForm').validator({
+        fields: {
+          expressCode: {
+            tip: "请选择快递名称",
+            rule: '快递名称:required;length[~30];'
+          },
+          tracking:{
+                  tip:"请输入快递单号",
+                  rule:"快递单号:required;",
+          }
+        },
+        valid: function(form){
+          var orderId = $('#orderId').val();
+          toEditsExpress(orderId,{$p});
+        }
+  })
+});
+</script>
+{/block}

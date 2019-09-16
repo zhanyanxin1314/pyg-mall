@@ -1,0 +1,18 @@
+stages:
+  - package
+  - build
+
+package:
+  stage: package
+  script:
+    - docker-compose down
+    - docker build -t itcast/php-pygshop-web .
+  tags:
+    - centos-120
+
+build:
+  stage: build
+  script:
+   - docker-compose up -d
+  tags:
+   - centos-120

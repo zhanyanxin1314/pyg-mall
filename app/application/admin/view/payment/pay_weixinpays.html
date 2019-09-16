@@ -1,0 +1,78 @@
+{extend name="index_layout"/}
+{block name="script"}
+<script src="__STATIC__/admin/js/payment.js" type="text/javascript"></script>
+{/block}
+{block name="main"}
+<div class="layui-card">
+    <div class="layui-card-header">广告列表</div>
+    <div class="layui-card-body">
+        <div style="font-size:15px;font-weight:bold;color:red;">
+        <div>注：配置微信支付后，需要将微信支付安全证书导入到项目的\extend\wxpay\cert目录下；</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;安全证书的 <a style="color:blue" href="https://pay.weixin.qq.com" target="_blank">微信商户平台</a> 下载；</div>
+        </div>
+        <form id="payForm">
+            <input type="hidden" id="id" value="{$object['id']}" />
+            <div class="layui-form-item">
+                <label class="layui-form-label">支付名称 </label>
+                <div class="layui-input-inline w300">
+                    <input type="text" id="payName" name="payName" value="{$object['payName']}" class="ipt" value="" />
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">APPID </label>
+                <div class="layui-input-inline w300">
+                    <input type="text" id="appId" name="appId" value="{$object['appId'] ?? ''}" class="cfg" />
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">微信支付商户号：(mch_id)</label>
+                <div class="layui-input-inline w300">
+                    <input type="text" id="mchId" name="mchId" value="{$object['mchId']?? ''}" class="cfg" />
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">API密钥(key)</label>
+                <div class="layui-input-inline w300">
+                    <input type="text" id="apiKey" name="apiKey" value="{$object['apiKey']?? ''}" class="cfg" />
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">Appsecret</label>
+                <div class="layui-input-inline w300">
+                    <input type="text" id="appsecret" name="appsecret" value="{$object['appsecret']?? ''}" class="cfg" />
+                    <input type="hidden" id="payIcon"  class="cfg" maxLength='100' />
+
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">支付方式描述</label>
+                <div class="layui-input-inline w300">
+                    <textarea id="payDesc" name="payDesc" class="ipt" style="width:340px;height:100px;">{$object['payDesc']}</textarea>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">排序号</label>
+                <div class="layui-input-inline w300">
+                    <input type="text" id="payOrder" name="payOrder" value="{$object['payOrder']}" class="ipt" />
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" type="submit">立即提交</button>
+                    <a class="layui-btn layui-btn-normal" href="javascript:;" onClick="javascript:history.go(-1);">返回</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+
+
+
+</script>
+{/block}

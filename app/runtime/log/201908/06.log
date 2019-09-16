@@ -1,0 +1,1481 @@
+---------------------------------------------------------------
+[2019-08-06T09:18:45+08:00] 127.0.0.1 GET tp-mall.com/
+[运行时间：6.225888s] [吞吐率：0.16req/s] [内存消耗：3,469.00kb] [文件加载：96]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'x-lantern-version' => '5.5.0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\mall\app\application\index\view\index\index.html [ array (
+  0 => 'canlendars',
+  1 => 'days',
+  2 => 'today',
+  3 => 'signs_dates',
+  4 => 'sign_info',
+  5 => 'sign_tip',
+  6 => 'sign_tip1',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.453908s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_user_sign` [ RunTime:0.091206s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_user_sign` WHERE  `uid` = 0  AND `addtime` = 1565020800 LIMIT 1 [ RunTime:0.177802s ]
+[ sql ] [ SQL ] SELECT SUM(`points`) AS tp_sum FROM `pyg_user_sign` WHERE  `uid` = 0 [ RunTime:0.108006s ]
+[ sql ] [ SQL ] SELECT `addtime` FROM `pyg_user_sign` WHERE  `uid` = 0  AND `addtime` IN (between time,2019-08-01,1565054323) [ RunTime:0.000837s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_carts` [ RunTime:0.011844s ]
+[ sql ] [ SQL ] SELECT SUM(`cartNum`) AS tp_sum FROM `pyg_carts` WHERE  `userId` IS NULL [ RunTime:0.000551s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods` [ RunTime:0.003886s ]
+[ sql ] [ SQL ] SELECT `goodsId`,`goodsName`,`goodsImg`,`marketPrice` FROM `pyg_goods` WHERE  `dataFlag` = 1  AND `isSale` = 1 ORDER BY rand() LIMIT 6 [ RunTime:0.084314s ]
+[ error ] [8]未定义变量: keyword[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:106]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: adURL[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:218]
+[ error ] [8]未定义数组索引: positionWidth[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:474]
+[ error ] [8]未定义数组索引: positionHeight[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:474]
+---------------------------------------------------------------
+[2019-08-06T09:18:46+08:00] 127.0.0.1 GET tp-mall.com/
+[运行时间：0.110035s] [吞吐率：9.09req/s] [内存消耗：3,469.62kb] [文件加载：96]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\mall\app\application\index\view\index\index.html [ array (
+  0 => 'canlendars',
+  1 => 'days',
+  2 => 'today',
+  3 => 'signs_dates',
+  4 => 'sign_info',
+  5 => 'sign_tip',
+  6 => 'sign_tip1',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003625s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_user_sign` [ RunTime:0.002059s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_user_sign` WHERE  `uid` = 0  AND `addtime` = 1565020800 LIMIT 1 [ RunTime:0.001156s ]
+[ sql ] [ SQL ] SELECT SUM(`points`) AS tp_sum FROM `pyg_user_sign` WHERE  `uid` = 0 [ RunTime:0.000686s ]
+[ sql ] [ SQL ] SELECT `addtime` FROM `pyg_user_sign` WHERE  `uid` = 0  AND `addtime` IN (between time,2019-08-01,1565054326) [ RunTime:0.000656s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_carts` [ RunTime:0.002197s ]
+[ sql ] [ SQL ] SELECT SUM(`cartNum`) AS tp_sum FROM `pyg_carts` WHERE  `userId` IS NULL [ RunTime:0.000400s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods` [ RunTime:0.002253s ]
+[ sql ] [ SQL ] SELECT `goodsId`,`goodsName`,`goodsImg`,`marketPrice` FROM `pyg_goods` WHERE  `dataFlag` = 1  AND `isSale` = 1 ORDER BY rand() LIMIT 6 [ RunTime:0.000946s ]
+[ error ] [8]未定义变量: keyword[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:106]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: adURL[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:218]
+[ error ] [8]未定义数组索引: positionWidth[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:474]
+[ error ] [8]未定义数组索引: positionHeight[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:474]
+---------------------------------------------------------------
+[2019-08-06T09:18:47+08:00] 127.0.0.1 GET tp-mall.com/img/wx_cz.jpg
+[运行时间：0.222386s] [吞吐率：4.50req/s] [内存消耗：1,947.02kb] [文件加载：75]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10',
+  'referer' => 'http://tp-mall.com/',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'image/webp,*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2019-08-06T09:18:51+08:00] 127.0.0.1 GET tp-mall.com/admin
+[运行时间：0.667585s] [吞吐率：1.50req/s] [内存消耗：3,249.42kb] [文件加载：96]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\mall\app\public\..\application\common\view\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004951s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_adminlog` [ RunTime:0.006860s ]
+[ sql ] [ SQL ] INSERT INTO `pyg_adminlog` (`uid` , `status` , `info` , `get` , `ip` , `create_time`) VALUES (0 , 0 , '提示语:请先登陆' , '/admin' , 2130706433 , 1565054331) [ RunTime:0.054493s ]
+---------------------------------------------------------------
+[2019-08-06T09:18:53+08:00] 127.0.0.1 GET tp-mall.com/admin/index/login.html
+[运行时间：0.178324s] [吞吐率：5.61req/s] [内存消耗：2,140.29kb] [文件加载：82]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/admin',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\mall\app\application\admin\view\index\login.html [ array (
+) ]
+---------------------------------------------------------------
+[2019-08-06T09:18:54+08:00] 127.0.0.1 GET tp-mall.com/api/checkcode/getverify/font_size/18/imageW/130/imageH/38.html
+[运行时间：1.038464s] [吞吐率：0.96req/s] [内存消耗：2,008.18kb] [文件加载：76]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/admin/index/login.html',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'image/webp,*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'font_size' => '18',
+  'imageW' => '130',
+  'imageH' => '38',
+)
+---------------------------------------------------------------
+[2019-08-06T09:18:59+08:00] 127.0.0.1 GET tp-mall.com/api/checkcode/getverify/font_size/18/imageW/130/imageH/38.html?0.9786182254364572
+[运行时间：0.273424s] [吞吐率：3.66req/s] [内存消耗：2,008.43kb] [文件加载：76]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/admin/index/login.html',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'image/webp,*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  '0_9786182254364572' => '',
+  'font_size' => '18',
+  'imageW' => '130',
+  'imageH' => '38',
+)
+---------------------------------------------------------------
+[2019-08-06T09:19:01+08:00] 127.0.0.1 GET tp-mall.com/api/checkcode/getverify/font_size/18/imageW/130/imageH/38.html?0.9492535573055633
+[运行时间：0.087153s] [吞吐率：11.47req/s] [内存消耗：2,008.43kb] [文件加载：76]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/admin/index/login.html',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'image/webp,*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  '0_9492535573055633' => '',
+  'font_size' => '18',
+  'imageW' => '130',
+  'imageH' => '38',
+)
+---------------------------------------------------------------
+[2019-08-06T09:19:03+08:00] 127.0.0.1 GET tp-mall.com/api/checkcode/getverify/font_size/18/imageW/130/imageH/38.html?0.15835553066650132
+[运行时间：0.079115s] [吞吐率：12.64req/s] [内存消耗：2,008.43kb] [文件加载：76]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/admin/index/login.html',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'image/webp,*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  '0_15835553066650132' => '',
+  'font_size' => '18',
+  'imageW' => '130',
+  'imageH' => '38',
+)
+---------------------------------------------------------------
+[2019-08-06T09:19:07+08:00] 127.0.0.1 POST tp-mall.com/admin/index/login.html
+[运行时间：0.213347s] [吞吐率：4.69req/s] [内存消耗：3,287.77kb] [文件加载：96]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; __cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/admin/index/login.html',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'verify' => 'mwhq',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008573s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_admin` [ RunTime:0.002653s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.012884s ]
+[ sql ] [ SQL ] UPDATE `pyg_admin`  SET `last_login_time` = 1565054347 , `last_login_ip` = 2130706433  WHERE  `id` = 1 [ RunTime:0.039445s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_adminlog` [ RunTime:0.003653s ]
+[ sql ] [ SQL ] INSERT INTO `pyg_adminlog` (`uid` , `status` , `info` , `get` , `ip` , `create_time`) VALUES (1 , 1 , '提示语:恭喜您，登陆成功' , '/admin/index/login.html' , 2130706433 , 1565054347) [ RunTime:0.000851s ]
+---------------------------------------------------------------
+[2019-08-06T09:19:12+08:00] 127.0.0.1 GET tp-mall.com/admin/index/index.html
+[运行时间：3.572753s] [吞吐率：0.28req/s] [内存消耗：3,499.60kb] [文件加载：97]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'thinkphp_show_page_trace=0|0; __cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/admin/index/login.html',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\mall\app\application\admin\view\index\index.html [ array (
+  0 => 'userInfo',
+  1 => 'SUBMENU_CONFIG',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003845s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_admin` [ RunTime:0.003276s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000771s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_menu` [ RunTime:0.002303s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 0  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.021091s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 3  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001026s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 10  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.004620s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 11  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.003102s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 24  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.002251s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 25  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000714s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 26  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.002444s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 13  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.002744s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 14  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.005252s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 27  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001598s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 28  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001395s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 29  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001216s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 23  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001630s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 30  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001748s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 31  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001324s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 15  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.004574s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 16  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001965s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 18  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001768s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 19  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001232s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 21  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001331s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 17  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001453s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 22  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001641s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 48  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000821s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 49  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000950s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 50  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001121s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 51  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001106s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 20  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000944s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 12  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001120s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 4  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001499s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 73  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.002318s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 78  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001655s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 79  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001274s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 74  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001383s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 105  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001438s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 86  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001334s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 87  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001113s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 85  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001464s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 88  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001628s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 89  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001294s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 90  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001111s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 76  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000928s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 92  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001351s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 93  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.004470s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 77  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001483s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 98  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001583s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 100  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000929s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 101  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000999s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 106  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.002177s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 107  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001124s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 5  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001282s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 56  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001071s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 109  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 110  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000947s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 111  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001158s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 62  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001363s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 63  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000891s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 64  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000977s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 65  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000763s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 66  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001023s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 67  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.001510s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 68  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.006601s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 69  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000885s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 70  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000889s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 71  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000886s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_menu` WHERE  `parentid` = 72  AND `status` = 1 ORDER BY `listorder` ASC,`id` ASC [ RunTime:0.000893s ]
+---------------------------------------------------------------
+[2019-08-06T09:19:13+08:00] 127.0.0.1 GET tp-mall.com/admin/main/index.html
+[运行时间：0.224498s] [吞吐率：4.45req/s] [内存消耗：3,282.67kb] [文件加载：95]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/admin/index/index.html',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\mall\app\application\admin\view\main\index.html [ array (
+  0 => 'userInfo',
+  1 => 'sys_info',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003986s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_admin` [ RunTime:0.002158s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000827s ]
+[ sql ] [ SQL ] SELECT VERSION() as version [ RunTime:0.000524s ]
+[ error ] [8]未定义变量: object[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\712757eee3d012ce523617d11564c40a.php:113]
+[ error ] [8]未定义变量: object[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\712757eee3d012ce523617d11564c40a.php:120]
+[ error ] [8]未定义变量: object[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\712757eee3d012ce523617d11564c40a.php:124]
+[ error ] [8]未定义变量: object[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\712757eee3d012ce523617d11564c40a.php:124]
+[ error ] [8]未定义变量: object[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\712757eee3d012ce523617d11564c40a.php:131]
+[ error ] [8]未定义变量: object[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\712757eee3d012ce523617d11564c40a.php:140]
+[ error ] [8]未定义变量: object[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\712757eee3d012ce523617d11564c40a.php:154]
+---------------------------------------------------------------
+[2019-08-06T09:19:13+08:00] 127.0.0.1 GET tp-mall.com/static/admin/img/title_head.png
+[运行时间：0.073452s] [吞吐率：13.61req/s] [内存消耗：1,947.09kb] [文件加载：75]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/static/admin/css/common.css',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'image/webp,*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2019-08-06T09:19:21+08:00] 127.0.0.1 GET tp-mall.com/seckill.html
+[运行时间：4.640121s] [吞吐率：0.22req/s] [内存消耗：3,255.05kb] [文件加载：91]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'seckill',
+  'route' => 'index/seckill/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016367s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods_seckill` [ RunTime:0.006162s ]
+[ sql ] [ SQL ] SELECT `product_id`,`stock`,`stop_time` FROM `pyg_goods_seckill` [ RunTime:0.003732s ]
+[ error ] [0]READONLY You can't write against a read only slave.[E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\library\think\cache\Driver.php:366]
+---------------------------------------------------------------
+[2019-08-06T09:19:22+08:00] 127.0.0.1 POST tp-mall.com/index/sign/userSign
+[运行时间：0.139203s] [吞吐率：7.18req/s] [内存消耗：2,262.17kb] [文件加载：83]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/',
+  'connection' => 'keep-alive',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2019-08-06T09:19:24+08:00] 127.0.0.1 GET tp-mall.com/login.html
+[运行时间：0.128546s] [吞吐率：7.78req/s] [内存消耗：2,972.05kb] [文件加载：86]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'login',
+  'route' => 'index/users/login',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\mall\app\application\index\view\users\login.html [ array (
+) ]
+[ info ] [ DB ] INIT mysql
+[ error ] [8]未定义变量: keyword[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\684b322fd5d4375b53dd4b0526388a93.php:106]
+[ error ] [8]未定义变量: loginName[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\684b322fd5d4375b53dd4b0526388a93.php:193]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012791s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_carts` [ RunTime:0.002358s ]
+[ sql ] [ SQL ] SELECT SUM(`cartNum`) AS tp_sum FROM `pyg_carts` WHERE  `userId` IS NULL [ RunTime:0.000641s ]
+---------------------------------------------------------------
+[2019-08-06T09:19:30+08:00] 127.0.0.1 POST tp-mall.com/index/users/checkLogin
+[运行时间：0.140803s] [吞吐率：7.10req/s] [内存消耗：3,176.17kb] [文件加载：88]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/login.html',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+)
+[ info ] [ PARAM ] array (
+  'loginName' => '15201251947',
+  'loginPwd' => '222222',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003118s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_users` [ RunTime:0.002051s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_users` WHERE  ( `loginName` = '15201251947' OR `userEmail` = '15201251947' OR `userPhone` = '15201251947' )  AND `dataFlag` = 1  AND `userStatus` = 1 LIMIT 1 [ RunTime:0.001107s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_user_ranks` [ RunTime:0.002344s ]
+[ sql ] [ SQL ] SELECT `rankId`,`rankName`,`rankImg` FROM `pyg_user_ranks` WHERE  `dataFlag` = 1  AND `startScore` <= 0  AND `endScore` >= 0 LIMIT 1 [ RunTime:0.000573s ]
+[ sql ] [ SQL ] UPDATE `pyg_users`  SET `lastTime` = '2019-08-06 09:19:30' , `lastIP` = '127.0.0.1'  WHERE  `userId` = 16 [ RunTime:0.007871s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_log_user_logins` [ RunTime:0.002158s ]
+[ sql ] [ SQL ] INSERT INTO `pyg_log_user_logins` (`userId` , `loginTime` , `loginIp`) VALUES (16 , '2019-08-06 09:19:30' , '127.0.0.1') [ RunTime:0.006284s ]
+---------------------------------------------------------------
+[2019-08-06T09:19:30+08:00] 127.0.0.1 GET tp-mall.com/
+[运行时间：0.129852s] [吞吐率：7.70req/s] [内存消耗：3,527.94kb] [文件加载：97]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/login.html',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\mall\app\application\index\view\index\index.html [ array (
+  0 => 'canlendars',
+  1 => 'days',
+  2 => 'today',
+  3 => 'signs_dates',
+  4 => 'sign_info',
+  5 => 'sign_tip',
+  6 => 'sign_tip1',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003145s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_user_sign` [ RunTime:0.001757s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_user_sign` WHERE  `uid` = 16  AND `addtime` = 1565020800 LIMIT 1 [ RunTime:0.000628s ]
+[ sql ] [ SQL ] SELECT SUM(`points`) AS tp_sum FROM `pyg_user_sign` WHERE  `uid` = 16 [ RunTime:0.000506s ]
+[ sql ] [ SQL ] SELECT `addtime` FROM `pyg_user_sign` WHERE  `uid` = 16  AND `addtime` IN (between time,2019-08-01,1565054370) [ RunTime:0.000554s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_carts` [ RunTime:0.008040s ]
+[ sql ] [ SQL ] SELECT SUM(`cartNum`) AS tp_sum FROM `pyg_carts` WHERE  `userId` = 16 [ RunTime:0.001019s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods` [ RunTime:0.003079s ]
+[ sql ] [ SQL ] SELECT `goodsId`,`goodsName`,`goodsImg`,`marketPrice` FROM `pyg_goods` WHERE  `dataFlag` = 1  AND `isSale` = 1 ORDER BY rand() LIMIT 6 [ RunTime:0.000912s ]
+[ error ] [8]未定义变量: keyword[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:106]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: list[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:187]
+[ error ] [8]未定义数组索引: adURL[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:218]
+[ error ] [8]未定义数组索引: positionWidth[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:474]
+[ error ] [8]未定义数组索引: positionHeight[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\41fb263d29eccb54c36ab8c4e36004c4.php:474]
+---------------------------------------------------------------
+[2019-08-06T09:19:32+08:00] 127.0.0.1 GET tp-mall.com/img/wx_cz.jpg
+[运行时间：0.087970s] [吞吐率：11.37req/s] [内存消耗：1,947.05kb] [文件加载：75]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'image/webp,*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2019-08-06T09:19:34+08:00] 127.0.0.1 POST tp-mall.com/index/sign/userSign
+[运行时间：0.189211s] [吞吐率：5.29req/s] [内存消耗：3,224.22kb] [文件加载：89]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '0',
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/',
+  'connection' => 'keep-alive',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010691s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_user_sign` [ RunTime:0.001942s ]
+[ sql ] [ SQL ] SELECT `num`,`points` FROM `pyg_user_sign` WHERE  `addtime` IN (between time,1564934400,1565020799)  AND `uid` = 16 LIMIT 1 [ RunTime:0.000663s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_user_sign` WHERE  `addtime` = 1565020800  AND `uid` = 16 LIMIT 1 [ RunTime:0.000655s ]
+[ sql ] [ SQL ] INSERT INTO `pyg_user_sign` (`addtime` , `uid` , `num` , `points`) VALUES (1565020800 , 16 , 2 , 6) [ RunTime:0.000944s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_user_bill` [ RunTime:0.003890s ]
+[ sql ] [ SQL ] INSERT INTO `pyg_user_bill` (`uid` , `title` , `category` , `type` , `number` , `balance` , `mark` , `add_time` , `status`) VALUES (16 , '用户签到' , 'integral' , 'sign' , 6 , 6 , '签到获得6积分' , '2019-08-06 09:19:34' , 1) [ RunTime:0.064241s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_user_sign` WHERE  `uid` = 16  AND `addtime` = 1565020800 LIMIT 1 [ RunTime:0.001769s ]
+[ sql ] [ SQL ] SELECT SUM(`points`) AS tp_sum FROM `pyg_user_sign` WHERE  `uid` = 16 [ RunTime:0.001452s ]
+---------------------------------------------------------------
+[2019-08-06T09:21:21+08:00] 127.0.0.1 GET tp-mall.com/seckill.html
+[运行时间：5.044673s] [吞吐率：0.20req/s] [内存消耗：3,255.11kb] [文件加载：91]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'seckill',
+  'route' => 'index/seckill/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'referer' => 'http://tp-mall.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005755s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods_seckill` [ RunTime:0.003858s ]
+[ sql ] [ SQL ] SELECT `product_id`,`stock`,`stop_time` FROM `pyg_goods_seckill` [ RunTime:0.000676s ]
+[ error ] [0]READONLY You can't write against a read only slave.[E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\library\think\cache\Driver.php:366]
+---------------------------------------------------------------
+[2019-08-06T09:21:45+08:00] 127.0.0.1 GET tp-mall.com/seckill.html
+[运行时间：0.097723s] [吞吐率：10.23req/s] [内存消耗：3,255.11kb] [文件加载：91]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'seckill',
+  'route' => 'index/seckill/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'referer' => 'http://tp-mall.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009403s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods_seckill` [ RunTime:0.002193s ]
+[ sql ] [ SQL ] SELECT `product_id`,`stock`,`stop_time` FROM `pyg_goods_seckill` [ RunTime:0.000760s ]
+[ error ] [0]READONLY You can't write against a read only slave.[E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\library\think\cache\Driver.php:366]
+---------------------------------------------------------------
+[2019-08-06T09:22:01+08:00] 127.0.0.1 GET tp-mall.com/seckill.html
+[运行时间：0.168339s] [吞吐率：5.94req/s] [内存消耗：3,443.88kb] [文件加载：97]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'seckill',
+  'route' => 'index/seckill/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'referer' => 'http://tp-mall.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\mall\app\application\index\view\seckill\index.html [ array (
+  0 => 'seckillGoodsList',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013690s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods_seckill` [ RunTime:0.002356s ]
+[ sql ] [ SQL ] SELECT `product_id`,`stock`,`stop_time` FROM `pyg_goods_seckill` [ RunTime:0.000661s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_carts` [ RunTime:0.001898s ]
+[ sql ] [ SQL ] SELECT SUM(`cartNum`) AS tp_sum FROM `pyg_carts` WHERE  `userId` = 16 [ RunTime:0.000705s ]
+[ error ] [8]未定义变量: keyword[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\e47f7bb88f686a6f42de93742988a70b.php:106]
+---------------------------------------------------------------
+[2019-08-06T09:22:01+08:00] 127.0.0.1 GET tp-mall.com/img/wx_cz.jpg
+[运行时间：0.089926s] [吞吐率：11.12req/s] [内存消耗：1,947.12kb] [文件加载：75]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/seckill.html',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'image/webp,*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2019-08-06T09:22:04+08:00] 127.0.0.1 GET tp-mall.com/seckill-12.html
+[运行时间：0.225221s] [吞吐率：4.44req/s] [内存消耗：3,525.10kb] [文件加载：99]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'seckill-<goodsId>',
+  'route' => 'index/seckill/detail',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'goodsId' => '12',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/seckill.html',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'goodsId' => '12',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\mall\app\application\index\view\seckill\detail.html [ array (
+  0 => 'goods',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003412s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods_seckill` [ RunTime:0.003030s ]
+[ sql ] [ SQL ] SELECT `product_id`,`stock`,`stop_time` FROM `pyg_goods_seckill` [ RunTime:0.000624s ]
+[ sql ] [ SQL ] SELECT `stock`,`start_time`,`stop_time` FROM `pyg_goods_seckill` WHERE  `product_id` = 12 LIMIT 1 [ RunTime:0.007167s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_goods_seckill` WHERE  `product_id` = 12  AND `is_show` = 1 LIMIT 1 [ RunTime:0.000987s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods_appraises` [ RunTime:0.003014s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pyg_goods_appraises` `ga` INNER JOIN `pyg_users` `u` ON `ga`.`userId`=`u`.`userId` INNER JOIN `pyg_goods` `oc` ON `oc`.`goodsId`=`ga`.`goodsId` WHERE  `isShow` = 1 [ RunTime:0.002961s ]
+[ sql ] [ SQL ] SELECT `ga`.*,`u`.`userName`,`u`.`loginName` FROM `pyg_goods_appraises` `ga` INNER JOIN `pyg_users` `u` ON `ga`.`userId`=`u`.`userId` INNER JOIN `pyg_goods` `oc` ON `oc`.`goodsId`=`ga`.`goodsId` WHERE  `isShow` = 1 LIMIT 0,15 [ RunTime:0.000821s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_carts` [ RunTime:0.002074s ]
+[ sql ] [ SQL ] SELECT SUM(`cartNum`) AS tp_sum FROM `pyg_carts` WHERE  `userId` = 16 [ RunTime:0.000784s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods` [ RunTime:0.001660s ]
+[ sql ] [ SQL ] SELECT `goodsId`,`goodsName`,`goodsImg`,`marketPrice` FROM `pyg_goods` WHERE  `isSale` = 1  AND `dataFlag` = 1  AND `goodsCatId` IS NULL [ RunTime:0.000805s ]
+[ sql ] [ SQL ] SELECT `goodsId`,`goodsName`,`goodsImg`,`marketPrice` FROM `pyg_goods` WHERE  `dataFlag` = 1  AND `isSale` = 1 ORDER BY rand() LIMIT 6 [ RunTime:0.000794s ]
+[ error ] [8]未定义变量: keyword[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\3f1cb933910962840172c88a9d31d675.php:106]
+[ error ] [8]未定义数组索引: goodsId[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\3f1cb933910962840172c88a9d31d675.php:397]
+[ error ] [8]未定义数组索引: goodsCatId[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\3f1cb933910962840172c88a9d31d675.php:424]
+---------------------------------------------------------------
+[2019-08-06T09:22:04+08:00] 127.0.0.1 GET tp-mall.com/img/wx_cz.jpg
+[运行时间：0.082745s] [吞吐率：12.09req/s] [内存消耗：1,947.06kb] [文件加载：75]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/seckill-12.html',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'image/webp,*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2019-08-06T09:22:08+08:00] 127.0.0.1 POST tp-mall.com/index/carts/addSeckillCart
+[运行时间：0.223897s] [吞吐率：4.47req/s] [内存消耗：3,271.47kb] [文件加载：90]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/seckill-12.html',
+  'connection' => 'keep-alive',
+  'content-length' => '42',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+)
+[ info ] [ PARAM ] array (
+  'goodsId' => '12',
+  'buyNum' => '1',
+  'rnd' => '0.9005497485918673',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.017177s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_log_seckill` [ RunTime:0.005108s ]
+[ sql ] [ SQL ] INSERT INTO `pyg_log_seckill` (`count` , `status` , `addtime`) VALUES (1 , 0 , '2019-08-06 09:22:08') [ RunTime:0.001811s ]
+---------------------------------------------------------------
+[2019-08-06T09:22:09+08:00] 127.0.0.1 POST tp-mall.com/index/carts/addSeckillCart
+[运行时间：0.077952s] [吞吐率：12.83req/s] [内存消耗：3,271.47kb] [文件加载：90]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/seckill-12.html',
+  'connection' => 'keep-alive',
+  'content-length' => '42',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+)
+[ info ] [ PARAM ] array (
+  'goodsId' => '12',
+  'buyNum' => '1',
+  'rnd' => '0.8362938231807072',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003215s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_log_seckill` [ RunTime:0.001856s ]
+[ sql ] [ SQL ] INSERT INTO `pyg_log_seckill` (`count` , `status` , `addtime`) VALUES (1 , 0 , '2019-08-06 09:22:09') [ RunTime:0.001538s ]
+---------------------------------------------------------------
+[2019-08-06T09:22:10+08:00] 127.0.0.1 POST tp-mall.com/index/carts/addSeckillCart
+[运行时间：0.106291s] [吞吐率：9.41req/s] [内存消耗：3,271.47kb] [文件加载：90]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/seckill-12.html',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+)
+[ info ] [ PARAM ] array (
+  'goodsId' => '12',
+  'buyNum' => '1',
+  'rnd' => '0.619322620276324',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003295s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_log_seckill` [ RunTime:0.001910s ]
+[ sql ] [ SQL ] INSERT INTO `pyg_log_seckill` (`count` , `status` , `addtime`) VALUES (1 , 0 , '2019-08-06 09:22:10') [ RunTime:0.001507s ]
+---------------------------------------------------------------
+[2019-08-06T09:22:10+08:00] 127.0.0.1 POST tp-mall.com/index/carts/addSeckillCart
+[运行时间：0.081403s] [吞吐率：12.28req/s] [内存消耗：3,271.47kb] [文件加载：90]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/seckill-12.html',
+  'connection' => 'keep-alive',
+  'content-length' => '42',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+)
+[ info ] [ PARAM ] array (
+  'goodsId' => '12',
+  'buyNum' => '1',
+  'rnd' => '0.7364469430593593',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003730s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_log_seckill` [ RunTime:0.001970s ]
+[ sql ] [ SQL ] INSERT INTO `pyg_log_seckill` (`count` , `status` , `addtime`) VALUES (1 , 0 , '2019-08-06 09:22:10') [ RunTime:0.001673s ]
+---------------------------------------------------------------
+[2019-08-06T09:22:10+08:00] 127.0.0.1 POST tp-mall.com/index/carts/addSeckillCart
+[运行时间：0.081285s] [吞吐率：12.30req/s] [内存消耗：3,271.47kb] [文件加载：90]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/seckill-12.html',
+  'connection' => 'keep-alive',
+  'content-length' => '42',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+)
+[ info ] [ PARAM ] array (
+  'goodsId' => '12',
+  'buyNum' => '1',
+  'rnd' => '0.9213475711017959',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003247s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_log_seckill` [ RunTime:0.001967s ]
+[ sql ] [ SQL ] INSERT INTO `pyg_log_seckill` (`count` , `status` , `addtime`) VALUES (1 , 0 , '2019-08-06 09:22:10') [ RunTime:0.001609s ]
+---------------------------------------------------------------
+[2019-08-06T09:22:10+08:00] 127.0.0.1 POST tp-mall.com/index/carts/addSeckillCart
+[运行时间：0.071033s] [吞吐率：14.08req/s] [内存消耗：3,271.47kb] [文件加载：90]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/seckill-12.html',
+  'connection' => 'keep-alive',
+  'content-length' => '42',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+)
+[ info ] [ PARAM ] array (
+  'goodsId' => '12',
+  'buyNum' => '1',
+  'rnd' => '0.4702672057683669',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003521s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_log_seckill` [ RunTime:0.001676s ]
+[ sql ] [ SQL ] INSERT INTO `pyg_log_seckill` (`count` , `status` , `addtime`) VALUES (1 , 0 , '2019-08-06 09:22:10') [ RunTime:0.001056s ]
+---------------------------------------------------------------
+[2019-08-06T09:22:11+08:00] 127.0.0.1 POST tp-mall.com/index/carts/addSeckillCart
+[运行时间：0.082248s] [吞吐率：12.16req/s] [内存消耗：3,271.47kb] [文件加载：90]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/seckill-12.html',
+  'connection' => 'keep-alive',
+  'content-length' => '42',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+)
+[ info ] [ PARAM ] array (
+  'goodsId' => '12',
+  'buyNum' => '1',
+  'rnd' => '0.6218031397537606',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003840s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_log_seckill` [ RunTime:0.001790s ]
+[ sql ] [ SQL ] INSERT INTO `pyg_log_seckill` (`count` , `status` , `addtime`) VALUES (1 , 0 , '2019-08-06 09:22:11') [ RunTime:0.001184s ]
+---------------------------------------------------------------
+[2019-08-06T09:22:11+08:00] 127.0.0.1 POST tp-mall.com/index/carts/addSeckillCart
+[运行时间：0.072472s] [吞吐率：13.80req/s] [内存消耗：3,271.47kb] [文件加载：90]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/seckill-12.html',
+  'connection' => 'keep-alive',
+  'content-length' => '42',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+)
+[ info ] [ PARAM ] array (
+  'goodsId' => '12',
+  'buyNum' => '1',
+  'rnd' => '0.4005597327951136',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003049s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_log_seckill` [ RunTime:0.001863s ]
+[ sql ] [ SQL ] INSERT INTO `pyg_log_seckill` (`count` , `status` , `addtime`) VALUES (1 , 0 , '2019-08-06 09:22:11') [ RunTime:0.001026s ]
+---------------------------------------------------------------
+[2019-08-06T09:22:11+08:00] 127.0.0.1 POST tp-mall.com/index/carts/addSeckillCart
+[运行时间：0.095874s] [吞吐率：10.43req/s] [内存消耗：3,271.47kb] [文件加载：90]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/seckill-12.html',
+  'connection' => 'keep-alive',
+  'content-length' => '43',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+)
+[ info ] [ PARAM ] array (
+  'goodsId' => '12',
+  'buyNum' => '1',
+  'rnd' => '0.10546941089739259',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006954s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_log_seckill` [ RunTime:0.002105s ]
+[ sql ] [ SQL ] INSERT INTO `pyg_log_seckill` (`count` , `status` , `addtime`) VALUES (1 , 0 , '2019-08-06 09:22:11') [ RunTime:0.001546s ]
+---------------------------------------------------------------
+[2019-08-06T09:22:11+08:00] 127.0.0.1 POST tp-mall.com/index/carts/addSeckillCart
+[运行时间：0.091465s] [吞吐率：10.93req/s] [内存消耗：3,271.47kb] [文件加载：90]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/seckill-12.html',
+  'connection' => 'keep-alive',
+  'content-length' => '42',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+)
+[ info ] [ PARAM ] array (
+  'goodsId' => '12',
+  'buyNum' => '1',
+  'rnd' => '0.7820067672507871',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008284s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_log_seckill` [ RunTime:0.001956s ]
+[ sql ] [ SQL ] INSERT INTO `pyg_log_seckill` (`count` , `status` , `addtime`) VALUES (1 , 0 , '2019-08-06 09:22:11') [ RunTime:0.001566s ]
+---------------------------------------------------------------
+[2019-08-06T09:22:11+08:00] 127.0.0.1 POST tp-mall.com/index/carts/addSeckillCart
+[运行时间：0.093230s] [吞吐率：10.73req/s] [内存消耗：3,271.47kb] [文件加载：90]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/seckill-12.html',
+  'connection' => 'keep-alive',
+  'content-length' => '43',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+)
+[ info ] [ PARAM ] array (
+  'goodsId' => '12',
+  'buyNum' => '1',
+  'rnd' => '0.46340310388907424',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010891s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_log_seckill` [ RunTime:0.002294s ]
+[ sql ] [ SQL ] INSERT INTO `pyg_log_seckill` (`count` , `status` , `addtime`) VALUES (1 , 0 , '2019-08-06 09:22:11') [ RunTime:0.001074s ]
+---------------------------------------------------------------
+[2019-08-06T09:22:11+08:00] 127.0.0.1 POST tp-mall.com/index/carts/addSeckillCart
+[运行时间：0.070762s] [吞吐率：14.13req/s] [内存消耗：3,271.47kb] [文件加载：90]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/seckill-12.html',
+  'connection' => 'keep-alive',
+  'content-length' => '43',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+)
+[ info ] [ PARAM ] array (
+  'goodsId' => '12',
+  'buyNum' => '1',
+  'rnd' => '0.40073082469298915',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003499s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_log_seckill` [ RunTime:0.001648s ]
+[ sql ] [ SQL ] INSERT INTO `pyg_log_seckill` (`count` , `status` , `addtime`) VALUES (1 , 0 , '2019-08-06 09:22:11') [ RunTime:0.000961s ]
+---------------------------------------------------------------
+[2019-08-06T09:22:12+08:00] 127.0.0.1 POST tp-mall.com/index/carts/addSeckillCart
+[运行时间：0.067300s] [吞吐率：14.86req/s] [内存消耗：3,271.47kb] [文件加载：90]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/seckill-12.html',
+  'connection' => 'keep-alive',
+  'content-length' => '42',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+)
+[ info ] [ PARAM ] array (
+  'goodsId' => '12',
+  'buyNum' => '1',
+  'rnd' => '0.9204065809393694',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003948s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_log_seckill` [ RunTime:0.002360s ]
+[ sql ] [ SQL ] INSERT INTO `pyg_log_seckill` (`count` , `status` , `addtime`) VALUES (1 , 0 , '2019-08-06 09:22:12') [ RunTime:0.001167s ]
+---------------------------------------------------------------
+[2019-08-06T09:22:12+08:00] 127.0.0.1 POST tp-mall.com/index/carts/addSeckillCart
+[运行时间：0.070074s] [吞吐率：14.27req/s] [内存消耗：3,271.47kb] [文件加载：90]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/seckill-12.html',
+  'connection' => 'keep-alive',
+  'content-length' => '42',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+)
+[ info ] [ PARAM ] array (
+  'goodsId' => '12',
+  'buyNum' => '1',
+  'rnd' => '0.5636243489584388',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003706s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_log_seckill` [ RunTime:0.001664s ]
+[ sql ] [ SQL ] INSERT INTO `pyg_log_seckill` (`count` , `status` , `addtime`) VALUES (1 , 0 , '2019-08-06 09:22:12') [ RunTime:0.001053s ]
+---------------------------------------------------------------
+[2019-08-06T09:25:12+08:00] 127.0.0.1 GET tp-mall.com/admin/seckill/index/menuid/111.html
+[运行时间：0.174230s] [吞吐率：5.74req/s] [内存消耗：3,295.41kb] [文件加载：93]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/admin/index/index.html',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'menuid' => '111',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\mall\app\application\admin\view\seckill\index.html [ array (
+  0 => 'p',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003750s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_admin` [ RunTime:0.003605s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000897s ]
+---------------------------------------------------------------
+[2019-08-06T09:25:13+08:00] 127.0.0.1 POST tp-mall.com/admin/seckill/saleByPage
+[运行时间：0.152656s] [吞吐率：6.55req/s] [内存消耗：3,411.27kb] [文件加载：97]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/admin/seckill/index/menuid/111.html',
+  'connection' => 'keep-alive',
+  'content-length' => '22',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+)
+[ info ] [ PARAM ] array (
+  'title' => '',
+  'page' => '1',
+  'limit' => '20',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005172s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_admin` [ RunTime:0.001887s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000571s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods_seckill` [ RunTime:0.001117s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pyg_goods_seckill` WHERE  `is_del` = 0 [ RunTime:0.009343s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_goods_seckill` WHERE  `is_del` = 0 ORDER BY `seckillId` DESC LIMIT 0,20 [ RunTime:0.000601s ]
+---------------------------------------------------------------
+[2019-08-06T09:25:14+08:00] 127.0.0.1 POST tp-mall.com/admin/seckill/showtime
+[运行时间：0.100822s] [吞吐率：9.92req/s] [内存消耗：3,302.33kb] [文件加载：93]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/admin/seckill/index/menuid/111.html',
+  'connection' => 'keep-alive',
+  'content-length' => '4',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '7',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005166s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_admin` [ RunTime:0.002725s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000703s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods_seckill` [ RunTime:0.003988s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_goods_seckill` WHERE  `seckillId` = 7 LIMIT 1 [ RunTime:0.000963s ]
+---------------------------------------------------------------
+[2019-08-06T09:25:15+08:00] 127.0.0.1 POST tp-mall.com/admin/seckill/showtime
+[运行时间：0.078861s] [吞吐率：12.68req/s] [内存消耗：3,309.97kb] [文件加载：93]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__cfduid=de3c3a8a3b81cc9e8800db07041ac6b441564985932; Hm_lvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; Hm_lpvt_fb2f7fcb2249dedf4ed4175e254055cb=1565054322; PHPSESSID=hj5bavj96psbj84s5pnbdgvo10; thinkphp_show_page_trace=0|0',
+  'referer' => 'http://tp-mall.com/admin/seckill/index/menuid/111.html',
+  'connection' => 'keep-alive',
+  'content-length' => '4',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'tp-mall.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '6',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003150s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_admin` [ RunTime:0.001969s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000733s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods_seckill` [ RunTime:0.002657s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_goods_seckill` WHERE  `seckillId` = 6 LIMIT 1 [ RunTime:0.000828s ]

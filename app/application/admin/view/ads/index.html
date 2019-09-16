@@ -1,0 +1,29 @@
+{extend name="index_layout"/}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="__STATIC__/libs/mmgrid/mmGrid.css" />
+{/block}
+{block name="script"}
+<script src="__STATIC__/libs/mmgrid/mmGrid.js" type="text/javascript"></script>
+<script src="__STATIC__/admin/js/gridtree.js" type="text/javascript"></script>
+<script src="__STATIC__/admin/js/ads.js" type="text/javascript"></script>
+{/block}
+{block name="main"}
+
+<form autocomplete="off" >
+<input type='text' id='key' class="layui-input" style="height:30px;" placeholder='广告名称'/>  
+<button class="btn btn-primary" type='button' onclick="javascript:loadQuery()"><i class='fa fa-search'></i>查询</button>
+<div style="clear:both"></div>
+
+</form>
+<div class="layui-btn-container" style="margin-left:6px;margin-top:10px;">
+    <a class="layui-btn layui-btn-sm" onclick="javascript:location.href='<?=url("/admin/ads/toEdit")?>'">新增广告</a>
+</div>
+
+<div id="mmg" class="mmg"></div>
+<div id="pg" style="text-align: right;"></div>
+
+<script>
+$(function(){initGrid({$p})});
+</script>
+
+{/block}

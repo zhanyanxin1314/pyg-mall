@@ -1,0 +1,127 @@
+{extend name="index_layout"/}
+{block name="css"}
+<style>
+.goodsCat{display:inline-block;width:150px}
+</style>
+{/block}
+{block name="script"}
+<script src="__STATIC__/admin/js/ads.js" type="text/javascript"></script>
+{/block}
+{block name="main"}
+<div class="layui-card">
+    <div class="layui-card-header">广告列表</div>
+    <div class="layui-card-body">
+       
+         <input type="hidden" name="id" id="adId" class="ipt" value="{$data['adId']}" />
+        <form id="adsForm">
+            <div class="layui-form-item">
+                <label class="layui-form-label">广告位置 </label>
+                <div class="layui-input-inline w300">
+                  <select id="adPositionId" name="adPositionId" class='ipt' maxLength='20'>
+                  <option value="">-请选择-</option>
+                  {volist name=":PYGGetPostionsDatas()" id='vo'}
+                  <option <?=($data['adPositionId']==$vo['positionId'])?'selected':'';?> value="{$vo['positionId']}">{$vo['positionName']}</option>
+                  {/volist}
+                  </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">广告标题 </label>
+                <div class="layui-input-inline w300">
+                    <input type="text" name="adName" id="adName" placeholder="广告标题" class="ipt" value="{$data['adName']}" />
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">广告Logo</label>
+                <div class="layui-input-inline w300">
+                    <button type="button" class="layui-btn layui-btn-primary pull-left" id="slide-pc-brand">选择图片</button>
+                    <input id="adFile" name="adFile" class="text ipt" data-target='#msg_adFile' autocomplete="off" type="hidden" value="{$data['adFile']}"/>
+                <span class='msg-box' id='msg_adFile'></span>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                  <label class="layui-form-label"></label>
+                  <div class="layui-input-inline w300">
+                    <div id="preview" >
+                        {if $data['adId']!=0}
+                          <img src="{$data['adFile']}" class="ipt" height='152'/>
+                        {/if}
+                    </div>
+                  </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">广告网址 </label>
+                <div class="layui-input-inline w300">
+                    <input type="text" name="adURL" id="adURL" placeholder="广告网址" class="ipt" value="{$data['adURL']}" />
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">排序</label>
+                <div class="layui-input-inline w300">
+                    <input type="text" name="adSort" id="adSort" placeholder="排序" class="ipt" value="{$data['adSort']}" />
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" type="submit">立即提交</button>
+                    <a class="layui-btn layui-btn-normal" href="javascript:;" onClick="javascript:history.go(-1);">返回</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+  layui.use('upload', function(){
+         var $ = layui.jquery;
+         var upload = layui.upload;            
+ upload.render({
+     elem: '#slide-pc-brand',
+     url: '/admin/goods/upload?dir=ads',
+     size: 500,
+     exts: 'jpg|png|jpeg',
+     multiple: true,
+     before: function(obj) {
+         layer.msg('图片上传中...', {
+                icon: 16,
+                shade: 0.01,
+                time: 0
+            })
+     },
+     done: function(res) {
+        layer.close(layer.msg());
+         if(res.status == 0) {
+             return layer.msg(res.message);
+         }
+         $('#preview').html('<img width="150" height="150" src="'+res.filepath+'"  />');
+         $('#adFile').val(res.filepath);
+     }
+ });
+});
+$(function(){
+  $('#adsForm').validator({
+        fields: {
+          adName: {
+            tip: "请输入广告标题",
+            rule: '广告标题:required;length[~30];'
+          },
+          adFile:{
+                  tip:"请上传广告图片",
+                  rule:"广告图片:required;",
+          },
+          adURL: {
+            tip: "请输入广告网址",
+            rule: '广告网址:required;length[~100];'
+          },
+          adSort: {
+            tip: "请输入序号",
+            rule: '序号:required;length[~3];'
+          },
+        },
+        valid: function(form){
+          var adId = $('#adId').val();
+          toEdits(adId,{$p});
+        }
+  })
+});
+</script>
+{/block}

@@ -1,0 +1,19 @@
+.wst-cont-frame.show{bottom: 0;}
+.wst-cont-frame .head{height: 32px;border: 1px solid #ddd;border-bottom: 2px solid #e23c3d;position: relative;}
+.wst-cont-frame .head span{float: left;width: 80px;height: 36px;line-height: 30px;text-align: center;font: 14px/30px 'microsoft yahei';position: relative;left: -1px;margin-top: -4px;background: #fff;border: 2px solid #e23c3d;border-bottom: 0;color: #e23c3d}
+.wst-cont-frame .head .close{text-align: right;position: absolute;right: 0;top: 0;padding-right: 22px;height: 30px;line-height: 30px;color: #005aa0;}
+.wst-cont-frame .list{border: 2px solid #e23c3d;border-top: none;position: relative;}
+.wst-cont-frame .goods{padding: 6px;color: #ccc;height: 90px;overflow: hidden;}
+.wst-cont-frame .term{float: left;overflow: hidden;margin-right: 10px;padding: 17px 10px 12px 0;border-right: 1px dotted #e23c3d;}
+.wst-cont-frame .term:hover .info .price a{opacity: 1;}
+.wst-cont-frame .term .img{float: left;margin-right: 5px;width: 48px;height: 48px;text-align: center;border: 1px solid #fff;overflow: hidden;}
+.wst-cont-frame .term .info,.wst-cont-frame .list .term-empty .info{float: left;width: 140px;}
+.wst-cont-frame .term .info .name{height:36px;line-height: 18px;overflow: hidden;display: block;color: #333;}
+.wst-cont-frame .term .info .price span{color: #e4393c;font-size: 14px;font-family: Verdana;font-weight: bold;}
+.wst-cont-frame .term .info .price a{padding-left: 10px;color: #005aa0;opacity: 0;}
+.wst-cont-frame .term-empty{float: left;overflow: hidden;margin-right: 10px;padding: 17px 10px 12px 0;border-right: 1px dotted #e23c3d;}
+.wst-cont-frame .term-empty .img{float: left;margin-right: 5px;width: 48px;height: 48px;text-align: center;color: #ccc;border: 1px solid #fff;font: 36px/48px arial;overflow: hidden;background: #f6f6f6;}
+.wst-cont-frame .term-contrast{position: absolute;right: 22px;top: 22px;width: 85px;text-align: center;}
+.wst-cont-frame .term-contrast .contrast{display: block;margin: 0 auto;margin-bottom: 10px;font: bold 14px/30px verdana;width: 60px;height: 30px;line-height: 30px;text-align: center;background: #e4393c;color: #fff;}
+.wst-cont-frame .term-contrast .contrast:hover{background: #e75153;}
+.wst-cont-frame .term-contrast .empty{color: #005aa0;}

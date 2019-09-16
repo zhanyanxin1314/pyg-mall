@@ -1,0 +1,4 @@
+<?php
+//000000000060
+ exit();?>
+think_serialize:a:3:{i:0;a:12:{s:2:"id";i:109;s:5:"title";s:12:"积分配置";s:4:"icon";s:0:"";s:8:"parentid";i:56;s:3:"app";s:5:"admin";s:10:"controller";s:14:"integralconfig";s:6:"action";s:5:"index";s:9:"parameter";s:0:"";s:6:"status";i:1;s:3:"tip";s:0:"";s:6:"is_dev";i:0;s:9:"listorder";i:0;}i:1;a:12:{s:2:"id";i:110;s:5:"title";s:12:"积分日志";s:4:"icon";s:0:"";s:8:"parentid";i:56;s:3:"app";s:5:"admin";s:10:"controller";s:11:"Integrallog";s:6:"action";s:5:"index";s:9:"parameter";s:0:"";s:6:"status";i:1;s:3:"tip";s:0:"";s:6:"is_dev";i:0;s:9:"listorder";i:0;}i:2;a:12:{s:2:"id";i:111;s:5:"title";s:12:"限时秒杀";s:4:"icon";s:0:"";s:8:"parentid";i:56;s:3:"app";s:5:"admin";s:10:"controller";s:7:"seckill";s:6:"action";s:5:"index";s:9:"parameter";s:0:"";s:6:"status";i:1;s:3:"tip";s:0:"";s:6:"is_dev";i:0;s:9:"listorder";i:0;}}

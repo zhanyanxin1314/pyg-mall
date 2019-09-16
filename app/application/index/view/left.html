@@ -1,0 +1,25 @@
+<div class="yui3-u-1-6 list">
+	<dl>
+		<dt><i>·</i> 订单中心</dt>
+		<a style="text-decoration:none;color: #333;" href="{:Url('index/center/order')}"><dd {if $nav =='order'}class="active"{/if}>我的订单</dd></a>
+		<a style="text-decoration:none;color: #333;" href="{:Url('index/center/appraise')}"><dd {if $nav =='appraise'}class="active"{/if}>评价晒单</dd></a>
+		<a style="text-decoration:none;color: #333;" href="{:Url('index/center/cancel')}"><dd {if $nav =='cancel'}class="active"{/if}>取消订单记录</dd></a>
+	</dl>
+	<dl>
+		<dt><i>·</i> 关注中心</dt>
+		<a style="text-decoration:none;color: #333;" href="{:Url('index/center/favorites')}"><dd {if $nav =='favorites'}class="active"{/if}>关注的商品 </dd></a>
+		<a style="text-decoration:none;color: #333;" href="{:Url('index/center/history')}"><dd {if $nav =='history'}class="active"{/if}>浏览历史 </dd></a>
+	</dl>
+	<dl>
+		<dt><i>·</i> 客户服务</dt>
+		<!--<dd>返修退换货 </dd>-->
+		<a style="text-decoration:none;color: #333;" href="{:Url('index/center/inform')}"><dd {if $nav =='inform'}class="active"{/if}>违规举报 </dd></a>
+		<a style="text-decoration:none;color: #333;" href="{:Url('index/center/complains')}"><dd {if $nav =='complains'}class="active"{/if}>投诉管理 </dd></a>
+	</dl>
+	<dl>
+		<dt><i>·</i> 设置</dt>
+		<a style="text-decoration:none;color:#333;" href="{:Url('index/center/info')}"><dd {if $nav =='info'}class="active"{/if}>个人信息</dd></a>
+		<a style="text-decoration:none;color:#333;" href="{:Url('index/center/address')}"><dd {if $nav =='address'}class="active"{/if}> 收货地址</dd></a>
+		<a style="text-decoration:none;color:#333;" href="{:Url('index/center/safe')}"><dd {if $nav =='safe'}class="active"{/if}> 安全设置</dd></a>
+	</dl>
+</div>		

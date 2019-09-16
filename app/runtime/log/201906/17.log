@@ -1,0 +1,536 @@
+---------------------------------------------------------------
+[2019-06-17T18:23:15+08:00] 127.0.0.1 POST tp-mall.com/index/favorites/add
+[运行时间：0.109090s] [吞吐率：9.17req/s] [内存消耗：3,231.58kb] [文件加载：89]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=j4crhq40llqa7jl6rgo4nhbgs1; thinkphp_show_page_trace=0|0; think_history_goods=think%3A%5B%229%22%2C%2211%22%2C%2212%22%2C%228%22%5D',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://tp-mall.com/category-12.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:67.0) Gecko/20100101 Firefox/67.0',
+  'host' => 'tp-mall.com',
+)
+[ info ] [ PARAM ] array (
+  'type' => '0',
+  'id' => '8',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002602s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods` [ RunTime:0.001708s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pyg_goods` WHERE  `dataFlag` = 1  AND `goodsId` = 8 [ RunTime:0.001082s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_favorites` [ RunTime:0.001807s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pyg_favorites` WHERE  `userId` = 16  AND `targetId` = 8 [ RunTime:0.001153s ]
+---------------------------------------------------------------
+[2019-06-17T18:24:12+08:00] 127.0.0.1 GET tp-mall.com/category-12.html
+[运行时间：0.223567s] [吞吐率：4.47req/s] [内存消耗：3,652.55kb] [文件加载：101]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'category-<cat>',
+  'route' => 'index/goods/lists',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'cat' => '12',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=j4crhq40llqa7jl6rgo4nhbgs1; thinkphp_show_page_trace=0|0; think_history_goods=think%3A%5B%229%22%2C%2211%22%2C%2212%22%2C%228%22%5D',
+  'connection' => 'keep-alive',
+  'referer' => 'http://tp-mall.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:67.0) Gecko/20100101 Firefox/67.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'cat' => '12',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\mall\app\application\index\view\goods\lists.html [ array (
+  0 => 'catId',
+  1 => 'isStock',
+  2 => 'isNew',
+  3 => 'orderBy',
+  4 => 'order',
+  5 => 'minPrice',
+  6 => 'maxPrice',
+  7 => 'brands',
+  8 => 'priceGrade',
+  9 => 'goodsPage',
+  10 => 'catNamePath',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003916s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods_cats` [ RunTime:0.001941s ]
+[ sql ] [ SQL ] SELECT `parentId` FROM `pyg_goods_cats` WHERE  `catId` = 12 LIMIT 1 [ RunTime:0.001928s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_brands` [ RunTime:0.002158s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_brands` WHERE  `dataFlag` = 1 [ RunTime:0.001155s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods` [ RunTime:0.002891s ]
+[ sql ] [ SQL ] SELECT min(marketPrice) minPrice,max(marketPrice) maxPrice FROM `pyg_goods` [ RunTime:0.001226s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pyg_goods` WHERE  `dataFlag` = 1  AND `isSale` = 1  AND ( goodsCatIdPath like '12_%' ) [ RunTime:0.001054s ]
+[ sql ] [ SQL ] SELECT `goodsId`,`goodsName`,`goodsSn`,`goodsStock`,`isNew`,`saleNum`,`marketPrice`,`goodsImg`,`visitNum`,`gallery` FROM `pyg_goods` WHERE  `dataFlag` = 1  AND `isSale` = 1  AND ( goodsCatIdPath like '12_%' ) ORDER BY `saleNum` DESC,`goodsId` DESC LIMIT 0,16 [ RunTime:0.002557s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_favorites` [ RunTime:0.002039s ]
+[ sql ] [ SQL ] SELECT `targetId` FROM `pyg_favorites` [ RunTime:0.001498s ]
+[ sql ] [ SQL ] SELECT `parentId` FROM `pyg_goods_cats` WHERE  `catId` = 12 LIMIT 1 [ RunTime:0.000953s ]
+[ sql ] [ SQL ] SELECT `catName` FROM `pyg_goods_cats` WHERE  `catId` IN (12) ORDER BY `catId` DESC [ RunTime:0.000800s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_carts` [ RunTime:0.001778s ]
+[ sql ] [ SQL ] SELECT SUM(`cartNum`) AS tp_sum FROM `pyg_carts` WHERE  `userId` = 16 [ RunTime:0.001076s ]
+[ sql ] [ SQL ] SELECT `parentId`,`catName`,`catId` FROM `pyg_goods_cats` WHERE  `isShow` = 1  AND `dataFlag` = 1  AND `catId` = 12 LIMIT 1 [ RunTime:0.001631s ]
+[ error ] [8]未定义变量: catInfo[E:\phpStudy\PHPTutorial\WWW\mall\app\application\index\controller\Goods.php:74]
+[ error ] [8]未定义变量: keyword[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\8da358988c2d65b6785e3c10884fa491.php:102]
+[ error ] [8]未定义数组索引: is_fav[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\8da358988c2d65b6785e3c10884fa491.php:244]
+[ error ] [8]未定义数组索引: is_fav[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\8da358988c2d65b6785e3c10884fa491.php:244]
+[ error ] [8]未定义数组索引: is_fav[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\8da358988c2d65b6785e3c10884fa491.php:244]
+[ error ] [8]未定义数组索引: is_fav[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\8da358988c2d65b6785e3c10884fa491.php:244]
+---------------------------------------------------------------
+[2019-06-17T18:24:13+08:00] 127.0.0.1 GET tp-mall.com/img/wx_cz.jpg
+[运行时间：0.122563s] [吞吐率：8.16req/s] [内存消耗：1,914.38kb] [文件加载：75]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=j4crhq40llqa7jl6rgo4nhbgs1; thinkphp_show_page_trace=0|0; think_history_goods=think%3A%5B%229%22%2C%2211%22%2C%2212%22%2C%228%22%5D',
+  'connection' => 'keep-alive',
+  'referer' => 'http://tp-mall.com/category-12.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'image/webp,*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:67.0) Gecko/20100101 Firefox/67.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2019-06-17T18:24:13+08:00] 127.0.0.1 GET tp-mall.com/img/wx_cz.jpg
+[运行时间：0.142558s] [吞吐率：7.01req/s] [内存消耗：1,914.38kb] [文件加载：75]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=j4crhq40llqa7jl6rgo4nhbgs1; thinkphp_show_page_trace=0|0; think_history_goods=think%3A%5B%229%22%2C%2211%22%2C%2212%22%2C%228%22%5D',
+  'connection' => 'keep-alive',
+  'referer' => 'http://tp-mall.com/category-12.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'image/webp,*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:67.0) Gecko/20100101 Firefox/67.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2019-06-17T18:24:14+08:00] 127.0.0.1 POST tp-mall.com/index/favorites/add
+[运行时间：0.145045s] [吞吐率：6.89req/s] [内存消耗：3,198.95kb] [文件加载：89]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=j4crhq40llqa7jl6rgo4nhbgs1; thinkphp_show_page_trace=0|0; think_history_goods=think%3A%5B%229%22%2C%2211%22%2C%2212%22%2C%228%22%5D',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://tp-mall.com/category-12.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:67.0) Gecko/20100101 Firefox/67.0',
+  'host' => 'tp-mall.com',
+)
+[ info ] [ PARAM ] array (
+  'type' => '0',
+  'id' => '9',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005613s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods` [ RunTime:0.002171s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pyg_goods` WHERE  `dataFlag` = 1  AND `goodsId` = 9 [ RunTime:0.001251s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_favorites` [ RunTime:0.001826s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pyg_favorites` WHERE  `userId` = 16  AND `targetId` = 9 [ RunTime:0.001009s ]
+[ sql ] [ SQL ] INSERT INTO `pyg_favorites` (`userId` , `targetId` , `createTime`) VALUES (16 , 9 , '2019-06-17 18:24:14') [ RunTime:0.000927s ]
+---------------------------------------------------------------
+[2019-06-17T18:24:29+08:00] 127.0.0.1 GET tp-mall.com/category-12.html
+[运行时间：0.168858s] [吞吐率：5.92req/s] [内存消耗：3,652.12kb] [文件加载：101]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'category-<cat>',
+  'route' => 'index/goods/lists',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'cat' => '12',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=j4crhq40llqa7jl6rgo4nhbgs1; thinkphp_show_page_trace=0|0; think_history_goods=think%3A%5B%229%22%2C%2211%22%2C%2212%22%2C%228%22%5D',
+  'connection' => 'keep-alive',
+  'referer' => 'http://tp-mall.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:67.0) Gecko/20100101 Firefox/67.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'cat' => '12',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\mall\app\application\index\view\goods\lists.html [ array (
+  0 => 'catId',
+  1 => 'isStock',
+  2 => 'isNew',
+  3 => 'orderBy',
+  4 => 'order',
+  5 => 'minPrice',
+  6 => 'maxPrice',
+  7 => 'brands',
+  8 => 'priceGrade',
+  9 => 'goodsPage',
+  10 => 'catNamePath',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002344s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods_cats` [ RunTime:0.001321s ]
+[ sql ] [ SQL ] SELECT `parentId` FROM `pyg_goods_cats` WHERE  `catId` = 12 LIMIT 1 [ RunTime:0.001084s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_brands` [ RunTime:0.002016s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_brands` WHERE  `dataFlag` = 1 [ RunTime:0.001937s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods` [ RunTime:0.001580s ]
+[ sql ] [ SQL ] SELECT min(marketPrice) minPrice,max(marketPrice) maxPrice FROM `pyg_goods` [ RunTime:0.000740s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pyg_goods` WHERE  `dataFlag` = 1  AND `isSale` = 1  AND ( goodsCatIdPath like '12_%' ) [ RunTime:0.000959s ]
+[ sql ] [ SQL ] SELECT `goodsId`,`goodsName`,`goodsSn`,`goodsStock`,`isNew`,`saleNum`,`marketPrice`,`goodsImg`,`visitNum`,`gallery` FROM `pyg_goods` WHERE  `dataFlag` = 1  AND `isSale` = 1  AND ( goodsCatIdPath like '12_%' ) ORDER BY `saleNum` DESC,`goodsId` DESC LIMIT 0,16 [ RunTime:0.001376s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_favorites` [ RunTime:0.002597s ]
+[ sql ] [ SQL ] SELECT `targetId` FROM `pyg_favorites` [ RunTime:0.001249s ]
+[ sql ] [ SQL ] SELECT `parentId` FROM `pyg_goods_cats` WHERE  `catId` = 12 LIMIT 1 [ RunTime:0.001390s ]
+[ sql ] [ SQL ] SELECT `catName` FROM `pyg_goods_cats` WHERE  `catId` IN (12) ORDER BY `catId` DESC [ RunTime:0.001534s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_carts` [ RunTime:0.003383s ]
+[ sql ] [ SQL ] SELECT SUM(`cartNum`) AS tp_sum FROM `pyg_carts` WHERE  `userId` = 16 [ RunTime:0.001490s ]
+[ sql ] [ SQL ] SELECT `parentId`,`catName`,`catId` FROM `pyg_goods_cats` WHERE  `isShow` = 1  AND `dataFlag` = 1  AND `catId` = 12 LIMIT 1 [ RunTime:0.001357s ]
+[ error ] [8]未定义变量: catInfo[E:\phpStudy\PHPTutorial\WWW\mall\app\application\index\controller\Goods.php:74]
+[ error ] [8]未定义变量: keyword[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\8da358988c2d65b6785e3c10884fa491.php:102]
+[ error ] [8]未定义数组索引: is_fav[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\8da358988c2d65b6785e3c10884fa491.php:244]
+[ error ] [8]未定义数组索引: is_fav[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\8da358988c2d65b6785e3c10884fa491.php:244]
+[ error ] [8]未定义数组索引: is_fav[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\8da358988c2d65b6785e3c10884fa491.php:244]
+---------------------------------------------------------------
+[2019-06-17T18:24:30+08:00] 127.0.0.1 GET tp-mall.com/img/wx_cz.jpg
+[运行时间：0.128443s] [吞吐率：7.79req/s] [内存消耗：1,914.38kb] [文件加载：75]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=j4crhq40llqa7jl6rgo4nhbgs1; thinkphp_show_page_trace=0|0; think_history_goods=think%3A%5B%229%22%2C%2211%22%2C%2212%22%2C%228%22%5D',
+  'connection' => 'keep-alive',
+  'referer' => 'http://tp-mall.com/category-12.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'image/webp,*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:67.0) Gecko/20100101 Firefox/67.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2019-06-17T18:24:30+08:00] 127.0.0.1 GET tp-mall.com/img/wx_cz.jpg
+[运行时间：0.122879s] [吞吐率：8.14req/s] [内存消耗：1,914.38kb] [文件加载：75]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=j4crhq40llqa7jl6rgo4nhbgs1; thinkphp_show_page_trace=0|0; think_history_goods=think%3A%5B%229%22%2C%2211%22%2C%2212%22%2C%228%22%5D',
+  'connection' => 'keep-alive',
+  'referer' => 'http://tp-mall.com/category-12.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'image/webp,*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:67.0) Gecko/20100101 Firefox/67.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2019-06-17T18:24:31+08:00] 127.0.0.1 POST tp-mall.com/index/favorites/add
+[运行时间：0.137998s] [吞吐率：7.25req/s] [内存消耗：3,198.95kb] [文件加载：89]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=j4crhq40llqa7jl6rgo4nhbgs1; thinkphp_show_page_trace=0|0; think_history_goods=think%3A%5B%229%22%2C%2211%22%2C%2212%22%2C%228%22%5D',
+  'connection' => 'keep-alive',
+  'content-length' => '12',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://tp-mall.com/category-12.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:67.0) Gecko/20100101 Firefox/67.0',
+  'host' => 'tp-mall.com',
+)
+[ info ] [ PARAM ] array (
+  'type' => '0',
+  'id' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002819s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods` [ RunTime:0.001969s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pyg_goods` WHERE  `dataFlag` = 1  AND `goodsId` = 10 [ RunTime:0.002348s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_favorites` [ RunTime:0.013527s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pyg_favorites` WHERE  `userId` = 16  AND `targetId` = 10 [ RunTime:0.001336s ]
+[ sql ] [ SQL ] INSERT INTO `pyg_favorites` (`userId` , `targetId` , `createTime`) VALUES (16 , 10 , '2019-06-17 18:24:31') [ RunTime:0.000739s ]
+---------------------------------------------------------------
+[2019-06-17T18:25:08+08:00] 127.0.0.1 GET tp-mall.com/category-12.html
+[运行时间：0.178555s] [吞吐率：5.60req/s] [内存消耗：3,647.68kb] [文件加载：101]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'category-<cat>',
+  'route' => 'index/goods/lists',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'cat' => '12',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=j4crhq40llqa7jl6rgo4nhbgs1; thinkphp_show_page_trace=0|0; think_history_goods=think%3A%5B%229%22%2C%2211%22%2C%2212%22%2C%228%22%5D',
+  'connection' => 'keep-alive',
+  'referer' => 'http://tp-mall.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:67.0) Gecko/20100101 Firefox/67.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'cat' => '12',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\mall\app\application\index\view\goods\lists.html [ array (
+  0 => 'catId',
+  1 => 'isStock',
+  2 => 'isNew',
+  3 => 'orderBy',
+  4 => 'order',
+  5 => 'minPrice',
+  6 => 'maxPrice',
+  7 => 'brands',
+  8 => 'priceGrade',
+  9 => 'goodsPage',
+  10 => 'catNamePath',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002370s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods_cats` [ RunTime:0.001435s ]
+[ sql ] [ SQL ] SELECT `parentId` FROM `pyg_goods_cats` WHERE  `catId` = 12 LIMIT 1 [ RunTime:0.000759s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_brands` [ RunTime:0.001582s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_brands` WHERE  `dataFlag` = 1 [ RunTime:0.002101s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods` [ RunTime:0.002122s ]
+[ sql ] [ SQL ] SELECT min(marketPrice) minPrice,max(marketPrice) maxPrice FROM `pyg_goods` [ RunTime:0.000819s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pyg_goods` WHERE  `dataFlag` = 1  AND `isSale` = 1  AND ( goodsCatIdPath like '12_%' ) [ RunTime:0.000925s ]
+[ sql ] [ SQL ] SELECT `goodsId`,`goodsName`,`goodsSn`,`goodsStock`,`isNew`,`saleNum`,`marketPrice`,`goodsImg`,`visitNum`,`gallery` FROM `pyg_goods` WHERE  `dataFlag` = 1  AND `isSale` = 1  AND ( goodsCatIdPath like '12_%' ) ORDER BY `saleNum` DESC,`goodsId` DESC LIMIT 0,16 [ RunTime:0.000989s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_favorites` [ RunTime:0.002119s ]
+[ sql ] [ SQL ] SELECT `targetId` FROM `pyg_favorites` [ RunTime:0.001071s ]
+[ sql ] [ SQL ] SELECT `parentId` FROM `pyg_goods_cats` WHERE  `catId` = 12 LIMIT 1 [ RunTime:0.000942s ]
+[ sql ] [ SQL ] SELECT `catName` FROM `pyg_goods_cats` WHERE  `catId` IN (12) ORDER BY `catId` DESC [ RunTime:0.000676s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_carts` [ RunTime:0.002038s ]
+[ sql ] [ SQL ] SELECT SUM(`cartNum`) AS tp_sum FROM `pyg_carts` WHERE  `userId` = 16 [ RunTime:0.001345s ]
+[ sql ] [ SQL ] SELECT `parentId`,`catName`,`catId` FROM `pyg_goods_cats` WHERE  `isShow` = 1  AND `dataFlag` = 1  AND `catId` = 12 LIMIT 1 [ RunTime:0.001270s ]
+[ error ] [8]未定义变量: catInfo[E:\phpStudy\PHPTutorial\WWW\mall\app\application\index\controller\Goods.php:74]
+[ error ] [8]未定义变量: keyword[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\8da358988c2d65b6785e3c10884fa491.php:102]
+[ error ] [8]未定义数组索引: is_fav[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\8da358988c2d65b6785e3c10884fa491.php:244]
+[ error ] [8]未定义数组索引: is_fav[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\8da358988c2d65b6785e3c10884fa491.php:244]
+---------------------------------------------------------------
+[2019-06-17T18:25:08+08:00] 127.0.0.1 GET tp-mall.com/img/wx_cz.jpg
+[运行时间：0.140750s] [吞吐率：7.10req/s] [内存消耗：1,914.38kb] [文件加载：75]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=j4crhq40llqa7jl6rgo4nhbgs1; thinkphp_show_page_trace=0|0; think_history_goods=think%3A%5B%229%22%2C%2211%22%2C%2212%22%2C%228%22%5D',
+  'connection' => 'keep-alive',
+  'referer' => 'http://tp-mall.com/category-12.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'image/webp,*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:67.0) Gecko/20100101 Firefox/67.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2019-06-17T18:25:09+08:00] 127.0.0.1 GET tp-mall.com/img/wx_cz.jpg
+[运行时间：0.151583s] [吞吐率：6.60req/s] [内存消耗：1,914.38kb] [文件加载：75]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=j4crhq40llqa7jl6rgo4nhbgs1; thinkphp_show_page_trace=0|0; think_history_goods=think%3A%5B%229%22%2C%2211%22%2C%2212%22%2C%228%22%5D',
+  'connection' => 'keep-alive',
+  'referer' => 'http://tp-mall.com/category-12.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'image/webp,*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:67.0) Gecko/20100101 Firefox/67.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2019-06-17T18:25:10+08:00] 127.0.0.1 POST tp-mall.com/index/favorites/add
+[运行时间：0.172607s] [吞吐率：5.79req/s] [内存消耗：3,198.95kb] [文件加载：89]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=j4crhq40llqa7jl6rgo4nhbgs1; thinkphp_show_page_trace=0|0; think_history_goods=think%3A%5B%229%22%2C%2211%22%2C%2212%22%2C%228%22%5D',
+  'connection' => 'keep-alive',
+  'content-length' => '12',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://tp-mall.com/category-12.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:67.0) Gecko/20100101 Firefox/67.0',
+  'host' => 'tp-mall.com',
+)
+[ info ] [ PARAM ] array (
+  'type' => '0',
+  'id' => '11',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003373s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods` [ RunTime:0.003541s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pyg_goods` WHERE  `dataFlag` = 1  AND `goodsId` = 11 [ RunTime:0.001240s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_favorites` [ RunTime:0.001569s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pyg_favorites` WHERE  `userId` = 16  AND `targetId` = 11 [ RunTime:0.000868s ]
+[ sql ] [ SQL ] INSERT INTO `pyg_favorites` (`userId` , `targetId` , `createTime`) VALUES (16 , 11 , '2019-06-17 18:25:10') [ RunTime:0.000862s ]
+---------------------------------------------------------------
+[2019-06-17T18:25:10+08:00] 127.0.0.1 GET tp-mall.com/category-12.html
+[运行时间：0.164928s] [吞吐率：6.06req/s] [内存消耗：3,647.18kb] [文件加载：101]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'category-<cat>',
+  'route' => 'index/goods/lists',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'cat' => '12',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=j4crhq40llqa7jl6rgo4nhbgs1; thinkphp_show_page_trace=0|0; think_history_goods=think%3A%5B%229%22%2C%2211%22%2C%2212%22%2C%228%22%5D',
+  'connection' => 'keep-alive',
+  'referer' => 'http://tp-mall.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:67.0) Gecko/20100101 Firefox/67.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'cat' => '12',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\mall\app\application\index\view\goods\lists.html [ array (
+  0 => 'catId',
+  1 => 'isStock',
+  2 => 'isNew',
+  3 => 'orderBy',
+  4 => 'order',
+  5 => 'minPrice',
+  6 => 'maxPrice',
+  7 => 'brands',
+  8 => 'priceGrade',
+  9 => 'goodsPage',
+  10 => 'catNamePath',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002362s ] mysql:host=127.0.0.1;dbname=mall;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods_cats` [ RunTime:0.001599s ]
+[ sql ] [ SQL ] SELECT `parentId` FROM `pyg_goods_cats` WHERE  `catId` = 12 LIMIT 1 [ RunTime:0.000904s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_brands` [ RunTime:0.001785s ]
+[ sql ] [ SQL ] SELECT * FROM `pyg_brands` WHERE  `dataFlag` = 1 [ RunTime:0.001016s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_goods` [ RunTime:0.012997s ]
+[ sql ] [ SQL ] SELECT min(marketPrice) minPrice,max(marketPrice) maxPrice FROM `pyg_goods` [ RunTime:0.001289s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pyg_goods` WHERE  `dataFlag` = 1  AND `isSale` = 1  AND ( goodsCatIdPath like '12_%' ) [ RunTime:0.001770s ]
+[ sql ] [ SQL ] SELECT `goodsId`,`goodsName`,`goodsSn`,`goodsStock`,`isNew`,`saleNum`,`marketPrice`,`goodsImg`,`visitNum`,`gallery` FROM `pyg_goods` WHERE  `dataFlag` = 1  AND `isSale` = 1  AND ( goodsCatIdPath like '12_%' ) ORDER BY `saleNum` DESC,`goodsId` DESC LIMIT 0,16 [ RunTime:0.001408s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_favorites` [ RunTime:0.001506s ]
+[ sql ] [ SQL ] SELECT `targetId` FROM `pyg_favorites` [ RunTime:0.000767s ]
+[ sql ] [ SQL ] SELECT `parentId` FROM `pyg_goods_cats` WHERE  `catId` = 12 LIMIT 1 [ RunTime:0.001118s ]
+[ sql ] [ SQL ] SELECT `catName` FROM `pyg_goods_cats` WHERE  `catId` IN (12) ORDER BY `catId` DESC [ RunTime:0.001027s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pyg_carts` [ RunTime:0.001469s ]
+[ sql ] [ SQL ] SELECT SUM(`cartNum`) AS tp_sum FROM `pyg_carts` WHERE  `userId` = 16 [ RunTime:0.000755s ]
+[ sql ] [ SQL ] SELECT `parentId`,`catName`,`catId` FROM `pyg_goods_cats` WHERE  `isShow` = 1  AND `dataFlag` = 1  AND `catId` = 12 LIMIT 1 [ RunTime:0.001001s ]
+[ error ] [8]未定义变量: catInfo[E:\phpStudy\PHPTutorial\WWW\mall\app\application\index\controller\Goods.php:74]
+[ error ] [8]未定义变量: keyword[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\8da358988c2d65b6785e3c10884fa491.php:102]
+[ error ] [8]未定义数组索引: is_fav[E:\phpStudy\PHPTutorial\WWW\mall\app\runtime\temp\8da358988c2d65b6785e3c10884fa491.php:244]
+---------------------------------------------------------------
+[2019-06-17T18:25:10+08:00] 127.0.0.1 GET tp-mall.com/img/wx_cz.jpg
+[运行时间：0.168140s] [吞吐率：5.95req/s] [内存消耗：1,914.38kb] [文件加载：75]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\mall\app\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=j4crhq40llqa7jl6rgo4nhbgs1; thinkphp_show_page_trace=0|0; think_history_goods=think%3A%5B%229%22%2C%2211%22%2C%2212%22%2C%228%22%5D',
+  'connection' => 'keep-alive',
+  'referer' => 'http://tp-mall.com/category-12.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'image/webp,*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:67.0) Gecko/20100101 Firefox/67.0',
+  'host' => 'tp-mall.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)

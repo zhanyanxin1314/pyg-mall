@@ -1,0 +1,77 @@
+{extend name="index_layout"/}
+{block name="css"}
+<style>
+.goodsCat{display:inline-block;width:150px}
+</style>
+{/block}
+{block name="script"}
+<script src="__STATIC__/admin/js/adpositions.js" type="text/javascript"></script>
+{/block}
+{block name="main"}
+<div class="layui-card">
+    <div class="layui-card-header">广告位置</div>
+    <div class="layui-card-body">
+        <form id="adPositionsForm">
+            <div class="layui-form-item">
+                <label class="layui-form-label">位置名称 </label>
+                <div class="layui-input-inline w300">
+                    <input type="text" name="positionName" id="positionName" placeholder="位置名称" class="ipt" value="{$data['positionName']}" />
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">位置代码 </label>
+                <div class="layui-input-inline w300">
+                    <input type="text" name="positionCode" id="positionCode" placeholder="位置代码" class="ipt" value="{$data['positionCode']}" />
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">排序号</label>
+                <div class="layui-input-inline w300">
+                    <input type="text" name="apSort" id="apSort" placeholder="排序" class="ipt" value="{$data['apSort']}" />
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                   <input type="hidden" name="id" id="positionId" class="ipt" value="{$data['positionId']}" />
+                    <button class="layui-btn" type="submit">立即提交</button>
+                    <a class="layui-btn layui-btn-normal" href="javascript:;" onClick="javascript:history.go(-1);">返回</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+ 
+$(function(){
+  $('#adPositionsForm').validator({
+        fields: {
+          positionName: {
+            tip: "请输入位置名称",
+            rule: '位置名称:required;length[~100];'
+          },
+
+          positionCode: {
+            tip: "请输入位置代码",
+            rule: '位置代码:required;length[~100];'
+          },
+          positionWidth: {
+            tip: "请输入建议宽度",
+            rule: '建议宽度:required;length[~100];'
+          },
+          positionHeight: {
+            tip: "请输入建议高度",
+            rule: '建议高度:required;length[~100];'
+          },
+          adSort: {
+            tip: "请输入序号",
+            rule: '序号:required;length[~3];'
+          },
+        },
+        valid: function(form){
+          var positionId = $('#positionId').val();
+          toEdits(positionId,{$p});
+        }
+  })
+});
+</script>
+{/block}

@@ -1,0 +1,125 @@
+{extend name="index_layout"/}
+{block name="js"}
+<script src="__ADMIN__/orders/orders.js?v={$v}" type="text/javascript"></script>
+{/block}
+{block name="main"}
+<div style='margin:10px;'>
+
+   <!-- 订单信息 -->
+   <div class='order-box'>
+      <div class='box-head'>订单信息</div>
+      <table class='wst-form'>
+         <tr>
+           <th width='100'>订单编号：</th>
+           <td>{$object['orderNo']}</td>
+         </tr>
+         <tr>
+           <th>支付方式：</th>
+           <td>{:PYGLangPayType($object['payType'])}</td>
+         </tr>
+         {if($object['payType']==1 && $object['isPay']==1)}
+         <tr>
+           <th>支付时间：</th>
+           <td>{$object['payTime']}</td>
+         </tr>
+
+         {/if}
+      </table>
+   </div>
+ 
+   <!-- 收货人信息 -->
+   <div class='order-box'>
+      <div class='box-head'>收货人信息</div>
+      <table class='wst-form'>
+         <tr>
+           <th width='100'>下单会员：</th>
+           <td>{$object['loginName']}</td>
+         </tr>
+         <tr>
+           <th width='100'>收货人：</th>
+           <td>{$object['userName']}</td>
+         </tr>
+         <tr>
+           <th>收货地址：</th>
+           <td>{$object['userAddress']}</td>
+         </tr>
+         <tr>
+            <th>联系方式：</th>
+            <td>{$object['userPhone']}</td>
+         </tr>
+      </table>
+   </div>
+
+    <!-- 快递信息 -->
+   <div class='order-box'>
+      <div class='box-head'>快递信息</div>
+      <table class='wst-form'>
+         <tr>
+           <th width='100'>快递名称：</th>
+           <td>{$object['expressCode']}</td>
+         </tr>
+         <tr>
+           <th>快递单号：</th>
+           <td>{$object['tracking']}</td>
+         </tr>
+      </table>
+   </div>
+   <!-- 商品信息 -->
+   <div class='order-box'>
+       <div class='box-head'>商品清单</div>
+       <div class='goods-head'>
+          <div class='goods'>商品</div>
+          <div class='price'>单价</div>
+          <div class='num'>数量</div>
+          <div class='t-price'>总价</div>
+       </div>
+       <div class='goods-item'>
+          <div class='goods-list'>
+             {volist name='$object["goods"]' id='vo2'}
+             {:hook('adminDocumentOrderViewGoodsPromotion',['goods'=>$vo2])}
+             <div class='item j-g{$vo2['goodsId']}'>
+		        <div class='goods'>
+		            <div class='img'>
+		                <a href='{:Url("index/goods/detail","goodsId=".$vo2["goodsId"])}' target='_blank'>
+			            <img src='{$vo2["goodsImg"]}' width='80' height='80' title='{$vo2["goodsName"]}'/>
+			            </a>
+		            </div>
+		            <div class='name'>{$vo2["goodsName"]}</div>
+		        </div>
+		        <div class='price'>¥{$vo2['goodsPrice']}</div>
+		        <div class='num'>{$vo2['goodsNum']}</div>
+		        <div class='t-price'>¥{$vo2['goodsPrice']*$vo2['goodsNum']}</div>
+		        <div class='f-clear'></div>
+             </div>
+             {/volist}
+          </div>
+       </div>
+       <div class='goods-footer'>
+          <div class='goods-summary' style='text-align:right'>
+             <div class='summary'>实付总金额：¥<span>{$object['totalMoney']}</span></div>
+          </div>
+       </div>
+   </div>
+   <div class='wst-footer'>
+       <button type="button" class="btn btn-mright" onclick="javascript:history.back(-1)"><i class="fa fa-angle-double-left"></i>返回</button>
+   </div>
+    <div id="editOrder" style="display: none;">
+        <table class='wst-form wst-box-top'>
+            <tr>
+              <th>支付方式<font color='red'>*</font>：</th>
+              <td>
+            <select id="payFrom">
+                {volist name="payMents" id="pays"}
+                {if $pays.payCode!='wallets'}
+                <option value="{$pays.payCode}">{$pays.payName}</option>
+                {/if}
+                {/volist}
+            </select></td>
+        </tr>
+        <tr>
+            <th>外部流水号<font color='red'>*</font>：</th>
+            <td><input type="text" id="trade_no" autocomplete="false" style='width:95%'></td>
+        </tr>
+    </div>
+<div>
+{/block}

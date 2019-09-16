@@ -1,0 +1,45 @@
+{extend name="index_layout"/}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="__STATIC__/libs/mmgrid/mmGrid.css" />
+{/block}
+{block name="script"}
+<script src="__STATIC__/libs/mmgrid/mmGrid.js" type="text/javascript"></script>
+<script src="__STATIC__/admin/js/integralconfig.js" type="text/javascript"></script>
+{/block}
+{block name="main"}
+
+<div class="layui-card">
+    <div class="layui-card-header">积分配置</div>
+    <div class="layui-card-body">
+        <div class="layui-form">
+            <table class="layui-hide" id="table" lay-filter="table"></table>
+        </div>
+    </div>
+</div>
+<div class="layui-btn-container">
+    <a class="layui-btn layui-btn-sm" onclick='javascript:toEdit(0)'>新增配置</a>
+</div>
+<div id="mmg" class="mmg"></div>
+<div id="pg" style="text-align: right;"></div>
+<div id='integralBox' style='display:none'>
+    <form id='integralForm' autocomplete="off">
+    <table class='wst-form wst-box-top'>
+       <tr>
+          <th width='100'>积分抵用比例<font color='red'>*</font>：</th>
+          <td><input type='text' id='integralProportion' name="integralProportion"  class='ipt' maxLength='20'/></td>
+       </tr>
+       <tr>
+          <th width='100'>签到奖励最低积分<font color='red'>*</font>：</th>
+          <td><input type='text' id='minimumPoints' name="minimumPoints"  class='ipt' maxLength='20'/></td>
+       </tr>
+        <tr>
+          <th width='100'>签到奖励最高积分<font color='red'>*</font>：</th>
+          <td><input type='text' id='highestPoints' name="highestPoints"  class='ipt' maxLength='20'/></td>
+       </tr>
+    </table>
+    </form>
+ </div>
+<script>
+  $(function(){initGrid({$p})});
+</script>
+{/block}

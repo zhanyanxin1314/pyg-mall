@@ -1,0 +1,25 @@
+{extend name="index_layout"/}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="__STATIC__/libs/mmgrid/mmGrid.css" />
+{/block}
+{block name="script"}
+<script src="__STATIC__/libs/mmgrid/mmGrid.js" type="text/javascript"></script>
+<script src="__STATIC__/admin/js/appraise.js" type="text/javascript"></script>
+{/block}
+{block name="main"}
+<div style="margin-bottom:10px;">
+	<div id="query" style="float:left;">
+		<input type="text" name="goodsName" style="height: 16px;" placeholder='商品名称' id="goodsName" class="query" />
+		<button type="button"  class='btn btn-primary btn-mright' onclick="javascript:loadGrid()"><i class="fa fa-search"></i>查询</button>
+	</div>
+   <div style="clear:both"></div>
+</div>
+ <div id="mmg" class="mmg layui-form"></div>
+ <div id="pg" style="text-align: right;"></div>
+<script>
+$(function(){
+	initGrid({$p});
+});
+</script>
+
+{/block}

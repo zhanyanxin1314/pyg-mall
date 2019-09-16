@@ -1,0 +1,28 @@
+{/* 对比框 */}
+<div class="wst-cont-frame" id="j-cont-frame">
+	<div class="head"><span>对比栏</span><a href="javascript:void(0);" class="close" onclick="javascript:contrastGoods(0,0,0)">关闭</a></div>
+	<div class="list">
+		<div class="goods" id="contrastList"></div>
+		<div class="term-contrast">
+			<p><a class="contrast" href="/index/goods/contrast" target="_blank">对比</a></p>
+			<p><a href="javascript:void(0);" onclick="javascript:contrastDels(0)" class="empty">清空</a></p>
+		</div>
+	</div>
+	<script id="colist" type="text/html">
+		{{# if(d.data && d.data.length>0){ }}
+		{{# for(var i=0; i<d.data.length; i++){ }}
+		<div class="term">
+			<div class="img"><img  src="{{ d.data[i].goodsImg }}" title="{{ d.data[i].goodsName }}" width="50" height="50"></div>
+			<div class="info"><p class="name">{{ d.data[i].goodsName }}</p><p class="price"><span>￥{{ d.data[i].marketPrice }}</span><a href="javascript:contrastDels({{ d.data[i].goodsId }});" >删除</a></p></div>
+		</div>
+		{{# } }}
+		{{# } }}
+		{{# var data = (d.data)?d.data.length:0 }}
+		{{# for(var i=data+1; i<5; i++){ }}
+		<div class="term-empty">
+			<div class="img">{{ i }}</div>
+			<div class="info"><p>您还可以继续添加</p></div>
+		</div>
+		{{# } }}
+    </script>
+</div>

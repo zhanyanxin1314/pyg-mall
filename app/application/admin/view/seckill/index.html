@@ -1,0 +1,29 @@
+{extend name="index_layout"/}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="__STATIC__/libs/mmgrid/mmGrid.css" />
+{/block}
+{block name="script"}
+<script src="__STATIC__/libs/mmgrid/mmGrid.js" type="text/javascript"></script>
+<script src="__STATIC__/admin/js/goods.js" type="text/javascript"></script>
+{/block}
+{block name="main"}
+<div class="layui-card">
+    <div class="layui-card-header">秒杀商品列表</div>
+    <div class="layui-card-body">
+        <div class="layui-form">
+            <table class="layui-hide" id="table" lay-filter="table"></table>
+        </div>
+    </div>
+</div>
+<div class="wst-toolbar">
+<input type="text" style="height:16px;" name="goodsName"  placeholder='商品名称/商品编号' id="title" class='j-ipt'/>
+<button class="btn btn-primary" onclick='javascript:loadGrid1(0)'><i class='fa fa-search'></i>查询</button>
+<div style='clear:both'></div>
+</div>
+<div id="mmg1" class="mmg1 layui-form"></div>
+<div id="pg1" style="text-align: right;"></div>
+<script>    
+var mmg1;
+$(function(){saleByPage1({$p})})
+</script>
+{/block}

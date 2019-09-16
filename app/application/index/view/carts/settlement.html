@@ -1,0 +1,337 @@
+{extend name="layout"/}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="__STATIC__/index/css/pages-getOrderInfo.css" />
+<style type="text/css">
+.pyg-frame2{min-width:120px;margin:2px 20px 2px 0px;background:#fff;border:1px solid #ccc;padding:7px;cursor:pointer;text-align:center;overflow:hidden;position:relative;}
+.pyg-frame1.j-selected i,.pyg-frame2.j-selected i{font-size:0;line-height:0;background:url(../img/img_gd_sel.png) no-repeat 0 0;display: block; width: 11px;height: 11px;position: absolute;z-index: 1;right: -1px;bottom: -1px;}
+.pyg-frame1.j-selected,.pyg-frame2.j-selected{border: 2px solid #e4393c;padding:6px;}
+</style>
+{/block}
+{block name="main"}
+	<div class="cart py-container">
+		<!--主内容-->
+		<div class="checkout py-container">
+			<div class="checkout-tit">
+				<h4 class="tit-txt">填写并核对订单信息</h4>
+			</div>
+			<input type='hidden' class='j-ipt' id='s_addressId' value='{if isset($userAddress["addressId"]) }{$userAddress["addressId"]}{/if}'/>
+			<div class="checkout-steps">
+				<!--收件人信息-->
+				<div class="step-tit">
+					<h5>收件人信息<span><a data-toggle="modal" data-target=".edit" data-keyboard="false" class="newadd">新增收货地址</a></span></h5>
+				</div>
+				<div class="step-cont">
+					<div class="addressInfo">
+						<ul class="addr-detail">
+							<li class="addr-item">
+								<div class="con name selected"><a href="javascript:;" >{$userAddress['userName']}<span title="点击取消选择">&nbsp;</a></div>
+								<div class="con address">{$userAddress['userName']} {$userAddress['userAddress']} <span>{$userAddress['userPhone']}</span>
+									{if $userAddress['isDefault'] == 1}
+									<span class="base">默认地址</span>
+									{/if}
+									<span class="edittext"><a data-toggle="modal" data-target=".edit" data-keyboard="false" >编辑</a>&nbsp;&nbsp;<a href="javascript:;">删除</a></span>
+								</div>
+							</li>
+						</ul>
+						<!--添加地址-->
+                        <div  tabindex="-1" role="dialog" data-hasfoot="false" class="sui-modal hide fade edit">
+						  <div class="modal-dialog">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <button type="button" data-dismiss="modal" aria-hidden="true" class="sui-close">×</button>
+						        <h4 id="myModalLabel" class="modal-title">添加收货地址</h4>
+						      </div>
+						      <div class="modal-body">
+						      	<form id="addressForm" class="sui-form form-horizontal">
+						      		<input type='hidden' class='j-eipt' id='addressId' value=''/>
+						      		 <div class="control-group">
+									    <label class=" control-label">收货人：</label>
+									    <div class="j-eipt controls">
+									      <input type="text" class="j-eipt input-medium" id='userName'>
+									    </div>
+									  </div>
+									   <div class="control-group">
+									    <label class="control-label">详细地址：</label>
+									    <div class="controls">
+									      <input type="text" class="j-eipt input-large" id='userAddress'>
+									    </div>
+									  </div>
+									  <div class="control-group">
+									    <label class="control-label">联系电话：</label>
+									    <div class="controls">
+									      <input type="text" class="j-eipt input-medium" id='userPhone' name="addrUserPhone" >
+									    </div>
+									  </div>
+									  <div class="control-group">
+									    <label class="control-label">是否默认地址：</label>
+									    <label style='margin-right:36px;'>
+							                   <input type='radio' name='isDefault' value='1' checked class='j-eipt wst-radio' id="isDefault1"/><label class="mt-1" for="isDefault1"></label>是
+							            </label>
+							            <label>
+							                <input type='radio' name='isDefault' value='0' class='j-eipt wst-radio' id="isDefault2"/><label class="mt-1" for="isDefault2"></label>否
+							            </label>
+									  </div>
+						      	</form>
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="sui-btn btn-primary btn-large" id='saveAddressBtn' onclick='javascript:editAddress()'>确定</button>
+						        <button type="button" data-dismiss="modal" class="sui-btn btn-default btn-large">取消</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+						<!--确认地址-->
+					</div>
+					<div class="hr"></div>
+					<div class="recommendAddr">
+						<ul class="addr-detail">
+							<li class="addr-item">
+								<div class="con name"><a href="{:Url('index/center/address')}" target="_blank" class="selected">更多收货地址</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="hr"></div>
+				<!--支付和送货-->
+				<div class="payshipInfo">
+					<div class="step-tit">
+						<h5>支付方式</h5>
+					</div>
+	
+					  {if !empty($payments['0'])} 
+          <div class="pyg-frame2 j-selected" onclick="javascript:changeSelected(0,'payType',this)">货到付款<i></i></div>
+          {/if}
+          {if !empty($payments['1'])}  
+          <div class="pyg-frame2 <?php echo empty($payments['0'])?'j-selected':''; ?>" onclick="javascript:changeSelected(1,'payType',this)">在线支付<i></i></div>
+          {/if}
+          <input type='hidden' value="<?php echo empty($payments['0'])?1:0; ?>" id='payType' class='j-ipt' />
+
+<!-- 				
+						<ul class="payType">
+							<li class="selected">货到付款<span title="点击取消选择"></span></li>
+							<li>微信付款<span title="点击取消选择"></span></li>
+							<li>在线支付<span title="点击取消选择"></span></li>
+						</ul>
+					</div> -->
+				
+					<div class="step-tit">
+						<h5>送货清单</h5>
+					</div>
+					<div class="step-cont">
+						<ul class="send-detail">
+							<li>
+								<div class="sendType">
+									<span>配送方式：</span>
+									<ul>
+										<li>
+											<div class="con express">天天快递</div>
+											<div class="con delivery">配送时间：预计8月10日（周三）09:00-15:00送达</div>
+										</li>
+									</ul>
+								</div>
+								<div class="sendGoods">
+									<span>商品清单：</span>
+									{volist name="carts['carts']" id="vo"}
+									<ul class="yui3-g">
+										<li class="yui3-u-1-6">
+											<span><img style="width: 100px;" src="{$vo['goodsImg']}"/></span>
+										</li>
+										<li class="yui3-u-7-12">
+											<div class="desc">{$vo['goodsName']}</div>
+											<div class="seven">7天无理由退货</div>
+										</li>
+										<li class="yui3-u-1-12">
+											<div class="price">￥{$vo['xiaoji']}</div>
+										</li>
+										<li class="yui3-u-1-12">
+											<div class="num">X{$vo['cartNum']}</div>
+										</li>
+										<li class="yui3-u-1-12">
+											<div class="exit">有货</div>
+										</li>
+									</ul>
+									{/volist}
+								</div>
+							</li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+					<div class="hr"></div>
+				</div>
+				<div class="linkInfo">
+					<div class="step-tit">
+						<h5>发票信息</h5>
+					</div>
+					<div class="step-cont">
+						<span>普通发票（电子）</span>
+						<span>个人</span>
+						<span>明细</span>
+					</div>
+				</div>
+				<div class="cardInfo">
+					<div class="step-tit">
+						<h5>使用优惠/抵用</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="order-summary">
+			<div class="static fr">
+				<div class="list">
+					<span>共&nbsp;<i class="number">{$carts['goodsTotalNum']}&nbsp;</i>件商品，总商品金额</span>
+					<em class="allprice">¥{$carts['goodsTotalMoney']}</em>
+				</div>
+				<div class="list">
+					<span>返现：</span>
+					<em class="money">0.00</em>
+				</div>
+				<div class="list">
+					<span>运费：</span>
+					<em class="transport">0.00</em>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix trade">
+			<div class="fc-price">应付金额:　<span class="price">¥{$carts['goodsTotalMoney']}</span></div>
+			<div class="fc-receiverInfo">寄送至:{$userAddress['userAddress']} 收货人：{$userAddress['userName']}  {$userAddress['userPhone']} </div>
+		</div>
+		<div class="submit">
+			<a class="sui-btn btn-danger btn-xlarge"  onclick='javascript:submitOrder()'>提交订单</a>
+		</div>
+	</div>
+	<!-- 底部栏位 -->
+	<!--页面底部-->
+<div class="clearfix footer">
+	<div class="py-container">
+		<div class="footlink">
+			<div class="Mod-service">
+				<ul class="Mod-Service-list">
+					<li class="grid-service-item intro  intro1">
+
+						<i class="serivce-item fl"></i>
+						<div class="service-text">
+							<h4>正品保障</h4>
+							<p>正品保障，提供发票</p>
+						</div>
+
+					</li>
+					<li class="grid-service-item  intro intro2">
+
+						<i class="serivce-item fl"></i>
+						<div class="service-text">
+							<h4>正品保障</h4>
+							<p>正品保障，提供发票</p>
+						</div>
+
+					</li>
+					<li class="grid-service-item intro  intro3">
+
+						<i class="serivce-item fl"></i>
+						<div class="service-text">
+							<h4>正品保障</h4>
+							<p>正品保障，提供发票</p>
+						</div>
+
+					</li>
+					<li class="grid-service-item  intro intro4">
+
+						<i class="serivce-item fl"></i>
+						<div class="service-text">
+							<h4>正品保障</h4>
+							<p>正品保障，提供发票</p>
+						</div>
+
+					</li>
+					<li class="grid-service-item intro intro5">
+
+						<i class="serivce-item fl"></i>
+						<div class="service-text">
+							<h4>正品保障</h4>
+							<p>正品保障，提供发票</p>
+						</div>
+
+					</li>
+				</ul>
+			</div>
+			<div class="clearfix Mod-list">
+				<div class="yui3-g">
+					<div class="yui3-u-1-6">
+						<h4>购物指南</h4>
+						<ul class="unstyled">
+							<li>购物流程</li>
+							<li>会员介绍</li>
+							<li>生活旅行/团购</li>
+							<li>常见问题</li>
+							<li>购物指南</li>
+						</ul>
+
+					</div>
+					<div class="yui3-u-1-6">
+						<h4>配送方式</h4>
+						<ul class="unstyled">
+							<li>上门自提</li>
+							<li>211限时达</li>
+							<li>配送服务查询</li>
+							<li>配送费收取标准</li>
+							<li>海外配送</li>
+						</ul>
+					</div>
+					<div class="yui3-u-1-6">
+						<h4>支付方式</h4>
+						<ul class="unstyled">
+							<li>货到付款</li>
+							<li>在线支付</li>
+							<li>分期付款</li>
+							<li>邮局汇款</li>
+							<li>公司转账</li>
+						</ul>
+					</div>
+					<div class="yui3-u-1-6">
+						<h4>售后服务</h4>
+						<ul class="unstyled">
+							<li>售后政策</li>
+							<li>价格保护</li>
+							<li>退款说明</li>
+							<li>返修/退换货</li>
+							<li>取消订单</li>
+						</ul>
+					</div>
+					<div class="yui3-u-1-6">
+						<h4>特色服务</h4>
+						<ul class="unstyled">
+							<li>夺宝岛</li>
+							<li>DIY装机</li>
+							<li>延保服务</li>
+							<li>品优购E卡</li>
+							<li>品优购通信</li>
+						</ul>
+					</div>
+					<div class="yui3-u-1-6">
+						<h4>帮助中心</h4>
+						<img src="../img/wx_cz.jpg">
+					</div>
+				</div>
+			</div>
+			<div class="Mod-copyright">
+				<ul class="helpLink">
+					<li>关于我们<span class="space"></span></li>
+					<li>联系我们<span class="space"></span></li>
+					<li>关于我们<span class="space"></span></li>
+					<li>商家入驻<span class="space"></span></li>
+					<li>营销中心<span class="space"></span></li>
+					<li>友情链接<span class="space"></span></li>
+					<li>关于我们<span class="space"></span></li>
+					<li>营销中心<span class="space"></span></li>
+					<li>友情链接<span class="space"></span></li>
+					<li>关于我们</li>
+				</ul>
+				<p>地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100</p>
+				<p>京ICP备08001421号京公网安备110108007702</p>
+			</div>
+		</div>
+	</div>
+</div>
+{include file='footer' /}
+{/block}

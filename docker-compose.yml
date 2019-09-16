@@ -1,0 +1,47 @@
+version: '3.3'
+
+services:
+  mysql:
+    image: mysql:5.7
+    restart: always
+    command: mysqld  --skip-ssl --character_set_server=utf8mb4 --sql_mode=""
+    volumes:
+      - ./data:/docker-entrypoint-initdb.d/
+      - ./m1/mysql.cnf:/etc/mysql/conf.d/mysql.cnf
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    ports:
+      - 3306:3306
+  web:
+    image: itcast/php-pygshop-web
+    restart: always
+    ports:
+      - 8021:80
+    depends_on:
+      - mysql
+    environment:
+      - DB_HOST=mysql
+      - DB_USER=root
+      - DB_PASS=
+      - DB_NAME=mall
+  phpadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpadmin
+    volumes:
+      - /sessions
+    ports:
+      - 336:80
+    environment:
+      - PMA_ARBITRARY=1
+    restart: always
+    links:
+      - mysql
+      
+  redis:
+    image: redis
+    container_name: my_redis
+    command: redis-server --requirepass 123456
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./data:/data

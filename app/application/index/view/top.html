@@ -1,0 +1,89 @@
+<div id="nav-bottom">
+	<!--顶部-->
+	<div class="nav-top">
+		<div class="top">
+			<div class="py-container">
+				<div class="shortcut">
+					{if condition="session('PYG_USER.userId') >0"}
+						<ul class="fl">
+							<li class="f-item">品优购欢迎您！</li>
+							<li class="f-item"> {:session('PYG_USER.trueName')?session('PYG_USER.trueName'):session('PYG_USER.loginName')} | <span><a href="javascript:logout();" >退出</a></span></li>
+						</ul>
+						<ul class="fr">
+							<li class="f-item"><a href="{:Url('index/center/order')}" target="_blank">我的订单</a></li>
+							<li class="f-item space"></li>
+							<li class="f-item"><a href="{:Url('index/center/favorites')}" target="_blank">我的关注</a></li>
+							<li class="f-item space"></li>
+						</ul>
+					{else}
+						<ul class="fl">
+							<li class="f-item">品优购欢迎您！</li>
+							<li class="f-item"> 请 <a href="{:Url('index/users/login')}" target="_blank"> 登录 </a>　<span><a href="{:Url('index/users/regist')}" >免费注册</a></span></li>
+						</ul>
+					{/if}
+				</div>
+			</div>
+		</div>
+		<!--头部-->
+		<div class="header">
+			<div class="py-container">
+				<div class="yui3-g Logo">
+					<div class="yui3-u Left logoArea">
+					<a class="logo-bd" title="品优购" href="/" target="_blank"></a>
+					</div>
+					<div class="yui3-u Center searchArea">
+						<div class="search">
+							<form action="" class="sui-form form-inline">
+								<div class="input-append">
+									<input type="text" id='search-ipt' type="text" class="input-error input-xxlarge" value="{$keyword}" />
+									<button class="sui-btn btn-xlarge btn-danger" type="button" onclick='javascript:search(this.value)'>搜索</button>
+								</div>
+							</form>
+						</div>
+						<div class="hotwords">
+							<ul>
+								<li class="f-item">品优购首发</li>
+								<li class="f-item">亿元优惠</li>
+								<li class="f-item">9.9元团购</li>
+								<li class="f-item">每满99减30</li>
+								<li class="f-item">亿元优惠</li>
+								<li class="f-item">9.9元团购</li>
+							</ul>
+						</div>
+					</div>
+					<div class="yui3-u Right shopArea">
+						<div class="fr shopcar">
+							<div class="show-shopcar" id="shopcar">
+								<span class="car"></span>
+								<a class="sui-btn btn-default btn-xlarge" href="{:Url('index/carts/index')}" target="_blank">
+									<span>我的购物车</span>
+									<i class="shopnum">{:PYGCartsGoodsNum()}</i>
+								</a>
+								<div class="clearfix shopcarlist" id="shopcarlist" >
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="yui3-g NavList">
+					<div class="yui3-u Left all-sort">
+						<h4>全部商品分类</h4>
+					</div>
+					<div class="yui3-u Center navArea">
+						<ul class="nav">
+							<li class="f-item"><a style="color:#000;text-decoration:none;" href="/" target="_blank">首页</a></li>
+							<li class="f-item"><a style="color:#000;text-decoration:none;" href="{:Url('index/seckill/index')}" target="_blank">秒杀</a></li>
+							
+							<!--<li class="f-item">品优超市</li>
+							<li class="f-item">全球购</li>
+							<li class="f-item">闪购</li>
+							<li class="f-item">团购</li>
+							<li class="f-item">有趣</li>-->
+						</ul>
+					</div>
+					<div class="yui3-u Right"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

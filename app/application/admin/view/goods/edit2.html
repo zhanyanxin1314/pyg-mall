@@ -1,0 +1,24 @@
+<div class="layui-form-item">
+  <div class="layui-form-label">相册图集</div>
+  <div class="layui-input-block" style="width: 70%;">
+    <div class="layui-upload">
+      <button type="button" class="layui-btn layui-btn-primary pull-left" id="slide-pc">选择多图</button>
+      <div class="pic-more">
+        <ul class="pic-more-upload-list" id="slide-pc-priview">
+        {foreach name="object['gallery']" item="vo" key="k"}
+          <li class="item_img">
+            <div class="operate"><i class="toleft layui-icon"></i><i class="toright layui-icon"></i><i  class="close layui-icon"></i></div>
+            <img src="{$vo}" style="width:100px;height:100px;" class="img" >
+            <input type="hidden" name="gallery[]" value="{$vo}" />
+          </li>
+          {/foreach}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="text-align: center;">
+    <button type='button' class="btn btn-primary btn-mright" onclick='javascript:save({$p})'><i class="fa fa-check"></i>保&nbsp;存</button>
+    <button type='button' class="btn" onclick="toBack({$p},'{$src}')"><i class="fa fa-angle-double-left"></i>返&nbsp;回</button>
+</div>
+     

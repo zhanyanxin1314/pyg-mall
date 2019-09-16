@@ -1,0 +1,4 @@
+<?php
+//000000000000
+ exit();?>
+think_serialize:a:4:{i:0;a:3:{s:7:"goodsId";i:9;s:9:"goodsName";s:121:"荣耀20i 3200万AI自拍 超广角三摄 全网通版6GB+64GB 渐变蓝 移动联通电信4G全面屏手机 双卡双待";s:8:"goodsImg";s:60:"/uploads/goods/20190530\26e93b88f7d6cc9a3d7100c9d1c71cd8.jpg";}i:1;a:3:{s:7:"goodsId";i:11;s:9:"goodsName";s:112:"三星 Galaxy S10 8GB+128GB皓玉白（SM-G9730）超感官全视屏骁龙855双卡双待全网通4G游戏手机";s:8:"goodsImg";s:60:"/uploads/goods/20190530\f972ffbde9e64063dd634a172e8f0246.jpg";}i:2;a:3:{s:7:"goodsId";i:12;s:9:"goodsName";s:115:"OPPO K3 高通骁龙710 升降摄像头 VOOC闪充 6GB+64GB 星云紫 全网通4G 全面屏拍照游戏智能手机";s:8:"goodsImg";s:60:"/uploads/goods/20190530\92d9ac6992c3f0721ff934785071e02c.jpg";}i:3;a:3:{s:7:"goodsId";i:14;s:9:"goodsName";s:130:"华为 HUAWEI P30 超感光徕卡三摄麒麟980AI智能芯片全面屏屏内指纹版手机8GB+128GB亮黑色全网通双4G手机";s:8:"goodsImg";s:60:"/uploads/goods/20190530\169e891c93641d61a0849769eeb16204.jpg";}}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<title>品优购，优质！优质！</title>
+	<link rel="icon" href="/assets/img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="__STATIC__/index/css/webbase.css" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/index/css/pages-JD-index.css" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/index/css/widget-jquery.autocomplete.css" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/index/css/duibi.css" />
+     <link rel="stylesheet" type="text/css" href="__STATIC__/libs/layui/css/layui.css" />
+     <link href="__STATIC__/libs/validator/jquery.validator.css" rel="stylesheet">
+    <script src="__STATIC__/libs/jquery/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$("#service").hover(function(){
+			$(".service").show();
+		},function(){
+			$(".service").hide();
+		});
+		$("#shopcar").hover(function(){
+			$("#shopcarlist").show();
+ 			var str1 = '';
+            $.post("/index/index/getcart",function(data){
+         			if(data.shopnum == 0){
+         				str1 += '购物车暂无数据';
+         				$("#shopcarlist").html(str1);
+         				return;
+         			} else {
+	         			$('.shopnum').html(data.shopnum);
+	                    $.each(data,function(i,subobj) {
+	                       $.each(subobj.goods,function(k,subobk) {
+	                        str1 += '<p>'+subobk['goodsName'].substring(0,25)+'</p>';
+	                        
+	                        $("#shopcarlist").html(str1);
+	                   		});  
+	                	}); 
+                	}
+            });
+		},function(){
+			$("#shopcarlist").hide();
+		});
+	})
+	</script>
+	<script src="__STATIC__/libs/validator/jquery.validator.min.js"></script>
+	<script type="text/javascript" src="__STATIC__/index/js/model/cartModel.js"></script>
+	<script type="text/javascript" src="__STATIC__/index/js/czFunction.js"></script>
+	<script type="text/javascript" src="__STATIC__/libs/jquery.easing/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="__STATIC__/libs/sui/sui.min.js"></script>
+	<script type="text/javascript" src="__STATIC__/index/js/pages/index.js"></script>
+	<script type="text/javascript" src="__STATIC__/index/js/widget/jquery.autocomplete.js"></script>
+	<script type="text/javascript" src="__STATIC__/index/js/widget/nav.js"></script>
+    <script src="__STATIC__/libs/layui/layui.js"></script>
+    <script src="__STATIC__/libs/layui/layui.all.js"></script>
+    <script src="__STATIC__/common/js/common.js"></script>
+    <script type="text/javascript" src="__STATIC__/libs/jquery.jqzoom/jquery.jqzoom.js"></script>
+	<script type="text/javascript" src="__STATIC__/libs/jquery.jqzoom/zoom.js"></script>
+	<script type="text/javascript" src="__STATIC__/index/js/goods.js"></script>
+	<script src="__STATIC__/index/js/order.js"></script>
+	<script src="__STATIC__/index/js/center.js"></script>
+</head>
+<script type="text/javascript">
+window.conf = {"ROOT":"__ROOT__","APP":"__APP__","STATIC":"__STATIC__","IS_LOGIN":"{if (int)session('PYG_USER.userId')>0 }1{else}0{/if}"}
+</script>
+<body>
+	{block name="top"}
+		{include file="top" /}
+	{/block}
+	{block name="css"}{/block}
+	{block name="script"}{/block}
+	{block name="main"}主内容{/block}
+</body>
+</html>

@@ -1,0 +1,14 @@
+{extend name="layout"/}
+{block name="title"}系统提示{/block}
+{block name="main"}
+<div style="text-align:center;margin-top:50px;">
+	<div>
+		<div>
+			<p>{$message}</p>
+		</div>
+		<div>
+		   <a href="{$Request.root.true}">返回首页</a>
+		</div>
+	</div>
+</div>
+{/block}

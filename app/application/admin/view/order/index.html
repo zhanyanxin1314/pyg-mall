@@ -1,0 +1,35 @@
+{extend name="index_layout"/}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="__STATIC__/libs/mmgrid/mmGrid.css" />
+{/block}
+{block name="script"}
+<script src="__STATIC__/libs/mmgrid/mmGrid.js" type="text/javascript"></script>
+<script src="__STATIC__/admin/js/order.js" type="text/javascript"></script>
+{/block}
+{block name="main"}
+<input type="hidden" id="userId" class="j-ipt" value='{$userId}' autocomplete="off"/>
+<input type="text" style='height: 16px;' name="orderNo"  placeholder='订单编号' id="orderNo" class='j-ipt'/>
+<select id='orderStatus' class='j-ipt' style='margin-top:2px'>
+  <option value='10000'>订单状态</option>
+  <option value='0'>待发货</option>
+  <option value='-2'>待支付</option>
+  <option value='-1'>已取消</option>
+  <option value='1'>配送中</option>
+  <option value='2'>已收货</option>
+  <option value='-3'>用户拒收</option>
+</select>
+<select id='payType' class='j-ipt' style='margin-top:2px'>
+   <option value='-1'>支付方式</option>
+   <option value='0'>货到付款</option>
+   <option value='1'>在线支付</option>
+</select>
+   <button class="btn btn-primary" onclick='javascript:loadGrid(0)'><i class="fa fa-search"></i>查询</button>
+   {if($userId>0)}<button class="btn f-right btn-fixtop" onclick="javascript:location.href='{:Url(\'admin/users/index\',\'p=\'.$p)}'" style="margin-left: 10px;"><i class="fa fa-angle-double-left"></i>返回</button>{/if}
+   <button class="btn btn-primary f-right btn-fixtop" onclick='javascript:toExport(0)'><i class="fa fa-sign-in"></i>导出</button>
+   <div style='clear:both'></div>
+<div id="mmg" class="mmg layui-form"></div>
+<div id="pg" style="text-align: right;"></div>
+<script>    
+$(function(){initGrid({$p});})
+</script>
+{/block}

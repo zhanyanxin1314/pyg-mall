@@ -1,0 +1,39 @@
+{extend name="index_layout"/}
+{block name="css"}
+<link rel="stylesheet" type="text/css" href="__STATIC__/libs/mmgrid/mmGrid.css" />
+{/block}
+{block name="script"}
+<script type="text/javascript" src="__STATIC__/admin/js/common.js"></script>
+<script src="__STATIC__/admin/js/brand.js" type="text/javascript"></script>
+<script src="__STATIC__/libs/mmgrid/mmGrid.js" type="text/javascript"></script>
+<script src="__STATIC__/admin/js/gridtree.js" type="text/javascript"></script>
+<script>
+$(function(){initGrid({$p});})
+</script>
+{/block}
+{block name="main"}
+<div class="layui-card">
+    <div class="layui-card-header">商品品牌管理</div>
+    <div class="layui-card-body">
+        <div class="layui-form">
+            <table class="layui-hide" id="table" lay-filter="table"></table>
+        </div>
+    </div>
+</div>
+<div style="margin-bottom: 10px;">
+     <select id='catId' class="layui-select">
+       <option value='0'>所属商品分类</option>
+       {volist name="gcatList" id="vo"}
+       <option value='{$vo['catId']}'>{$vo['catName']}</option>
+       {/volist}
+     </select> 
+   <input type='text' id='key' class="layui-input" style="height:37px;" placeholder='品牌名称'/>  
+   <button class="btn btn-primary" style="height:37px;" onclick='javascript:loadGrid(0)'><i class='fa fa-search'></i>查询</button>
+   <div style='clear:both'></div>
+</div>
+<div class="layui-btn-container">
+    <a class="layui-btn layui-btn-sm" onclick='javascript:toEdit(0,0)'>新增品牌</a>
+</div>
+<div id="mmg" class="mmg"></div>
+<div style="text-align:right;" id="pg"></div>
+{/block}

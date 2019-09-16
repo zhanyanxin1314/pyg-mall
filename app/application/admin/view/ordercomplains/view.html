@@ -1,0 +1,182 @@
+{extend name="index_layout"/}
+{block name="js"}
+<script src="__ADMIN__/ordercomplains/ordercomplains.js?v={$v}" type="text/javascript"></script>
+{/block}
+{block name="main"}
+<div id="wst-tabs" style="width:100%; height:99%;overflow: hidden; border: 1px solid #D3D3d3;" class="liger-tab">
+   <div id="wst-tab-1" tabId="wst-tab-1"  title="投诉详情" class='wst-tab'  style="height: 100%"> 
+   <div style="margin:10px">
+    <!-- 投诉信息 -->
+    <div class='order-box'>
+      <table class='wst-form'>
+         <tr>
+           <td class='head-ititle'>投诉信息</td>
+         </tr>
+         <tr>
+           <th width='100'>订单编号：</th>
+           <td>{$object['orderNo']}</td>
+         </tr>
+         <tr>
+           <th>投诉人：</th>
+           <td>{$order['userName']}</td>
+         </tr>
+         <tr>
+            <th>投诉类型：</th>
+            <td>
+             {if condition="$order['complainType'] eq 1"}
+                                        承诺的没有做到
+            {elseif condition="$order['complainType'] eq 2"/}
+                                        未按约定时间发货
+            {elseif condition="$order['complainType'] eq 3"/}
+                                        未按成交价进行交易
+            {elseif condition="$order['complainType'] eq 4"/}
+                                        恶意骚扰                          
+            {/if}
+            </td>
+         </tr>
+        
+         <tr>
+            <th>投诉内容：</th>
+            <td class='line-break'>{$order['complainContent']}</td>
+         </tr>
+         <tr>
+            <th>投诉时间：</th>
+            <td>{$order['complainTime']}</td>
+         </tr>
+      </table>
+   </div>
+   <!-- 仲裁结果 -->
+   <div class='order-box'>
+      <table class='wst-form'>
+         <tr>
+           <td class='head-ititle'>仲裁结果</td>
+         </tr>
+         <tr>
+      <th>处理状态：</th>
+          <td>
+            {if condition="$order['complainStatus'] eq 0"}
+                                        等待处理
+            {elseif condition="$order['complainStatus'] eq 1"/}
+                                        等待应诉人回应
+            {elseif condition="$order['complainStatus'] eq 2"/}
+                                        应诉人回应
+            {elseif condition="$order['complainStatus'] eq 3"/}
+                                        等待仲裁
+            {elseif condition="$order['complainStatus'] eq 4"/}
+                                         已仲裁       
+            {/if}
+          </td>
+       </tr>
+       <tr>
+          <td align='right' valign='right' width='120'>当前订单状态：</td>
+          <td>
+              {:PYGLangOrderStatus($order['order']['orderStatus'])}
+          </td>
+       </tr>
+       <tr>
+      <th>仲裁结果：</th>
+          <td class='line-break'>
+           {$order['finalResult']}
+          </td>
+       </tr>
+       <th>仲裁时间：</th>
+          <td>
+           {$order['finalResultTime']}
+          </td>
+       </tr>
+      
+        
+      </table>
+   </div>
+  </div>
+</div>
+   <div title="订单详情" class='wst-tab' id="order-detail"  style="height: 99%"> 
+      <div style='margin:10px;'>
+
+   <!-- 订单信息 -->
+   <div class='order-box'>
+      <div class='box-head'>订单信息</div>
+      <table class='wst-form'>
+         <tr>
+           <th width='100'>订单编号：</th>
+           <td>{$object['orderNo']}</td>
+         </tr>
+         <tr>
+           <th>支付方式：</th>
+           <td>{:PYGLangPayType($object['payType'])}</td>
+         </tr>
+      </table>
+   </div>
+
+
+   <!-- 收货人信息 -->
+   <div class='order-box'>
+      <div class='box-head'>收货人信息</div>
+      <table class='wst-form'>
+         <tr>
+           <th width='100'>收货人：</th>
+           <td>{$object['userName']}</td>
+         </tr>
+         <tr>
+           <th>收货地址：</th>
+           <td>{$object['userAddress']}</td>
+         </tr>
+         <tr>
+            <th>联系方式：</th>
+            <td>{$object['userPhone']}</td>
+         </tr>
+      </table>
+   </div>
+   <!-- 商品信息 -->
+   <div class='order-box'>
+       <div class='box-head'>商品清单</div>
+       <div class='goods-head'>
+          <div class='goods'>商品</div>
+          <div class='price'>单价</div>
+          <div class='num'>数量</div>
+          <div class='t-price'>总价</div>
+       </div>
+       <div class='goods-item'>
+       
+          <div class='goods-list'>
+             {volist name='$object["goods"]' id='vo2'}
+            
+             <div class='item j-g{$vo2['goodsId']}'>
+            <div class='goods'>
+                <div class='img'>
+                    <a href='{:Url("home/goods/detail","goodsId=".$vo2["goodsId"])}' target='_blank'>
+                  <img src='{$vo2["goodsImg"]}' width='80' height='80' title='{$vo2["goodsName"]}'/>
+                  </a>
+                </div>
+                <div class='name'>{$vo2["goodsName"]}</div>
+                <div class='spec'>{:str_replace('@@_@@','<br/>',$vo2["goodsSpecNames"])}</div>
+            </div>
+            <div class='price'>¥{$vo2['goodsPrice']}</div>
+            <div class='num'>{$vo2['goodsNum']}</div>
+            <div class='t-price'>¥{$vo2['goodsPrice']*$vo2['goodsNum']}</div>
+            <div class='f-clear'></div>
+             </div>
+             {/volist}
+          </div>
+       </div>
+       <div class='goods-footer'>
+          <div class='goods-summary' style='text-align:right'>
+             <div class='summary'>应付总金额：¥<span>{$object['totalMoney']}</span></div>
+          </div>
+       </div>
+   </div>
+   {if $from == 0}
+   <div class='wst-footer'><button type="button" onclick='javascript:history.go(-1)' class='btn'><i class="fa fa-angle-double-left"></i>返回</button></div>
+   {/if}
+<div>
+   </div>
+
+
+</div>
+<script>
+$(function(){
+  parent.showImg({photos: $('#respondAnnex')});
+  parent.showImg({photos: $('#complainAnnex')});
+});
+</script>
+{/block}

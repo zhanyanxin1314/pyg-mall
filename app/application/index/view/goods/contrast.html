@@ -1,0 +1,91 @@
+{extend name="layout"/}
+
+{block name="css"}
+<link href="__STATIC__/index/css/goodslist.css" rel="stylesheet">
+{/block}
+{block name="script"}
+<script type="text/javascript" src="__STATIC__/index/js/goods.js"></script>
+{/block}
+{block name="main"}
+<div class='wst-filters'>
+   <div class='item' style="border-left:2px solid #df2003;padding-left: 8px;">
+      <a class='link' href='/'>首页</a>
+      <i class="arrow">></i>
+      <span class='link'>商品对比</span>
+   </div>
+   <div class='wst-clear'></div>
+</div>
+{/* 商品展示  */}
+<div class="wst-container">
+	<div class="wst-contrast">
+		<div class="goods" id="goodsTabs">
+			<table class="table">
+				<tbody><tr>
+				
+					{volist name="$data['list']" id="go"}
+					<td>
+						<div class="goods-item">
+							<div class="img"><a href="{:Url('index/goods/detail','goodsId='.$go['goodsId'])}" target="_blank">
+							<img class="goodsImg"  src="{$go['goodsImg']}" title="{$go['goodsName']}">
+							</a></div>
+							<p class="name"><a href="{:Url('home/goods/detail','goodsId='.$go['goodsId'])}" target="_blank">{$go['goodsName']}</a></p>
+							<p class="price" id="goods-price-{$go['goodsId']}">¥ <span>{$go['marketPrice']}</span></p>
+							<div class="operation">
+								<a href="{:Url('index/goods/detail','goodsId='.$go['goodsId'])}" target="_blank" class="see">查看</a>
+								{if(count($data['list'])!=1)}<a href="javascript:void(0);" onclick="javascript:contrastDel({$go['goodsId']})" class="del">删除</a>{/if}
+							</div>
+							<div class='wst-clear'></div>
+						</div>
+					</td>
+					{/volist}
+				</tr></tbody>
+			</table>
+		</div>
+		<div class="goods goods-fixed2" id="goodsTabs2">
+			<table class="table">
+				<tbody><tr>
+					<th>
+						<div class="choice">空白</div>
+					</th>
+				</tr></tbody>
+			</table>
+		</div>
+		<table class="table2">
+		<tbody>
+		{volist name="$data['lists']" id="lis"}
+			<tr class="identical_{$lis['identical']}">
+				<th>
+					<div class="left-title">{$lis['name']}</div>
+				</th>
+				{volist name="$data['list']" id="go"}
+				
+				<td>
+					{if($lis['type']=='brand')}
+						{volist name="$lis['info']" id="info" key="k"}
+							<div class="right-title">
+							{if condition="$go['goodsId'] eq $key"}
+								{$info}
+							{/if}
+							</div>
+						{/volist}
+					{/if}
+					{if($lis['type']=='score')}
+						<div class="right-title">
+						{for start="0" end="$in"}
+          					<img src="__STATIC__/libs/raty/img/star-on.png">
+          				{/for}
+          				{for start="1" end="6-$in"}
+          					<img src="__STATIC__/libs/raty/img/star-off.png">
+          				{/for}
+						</div>
+					{/if}
+		
+				</td>
+				{/volist}
+			</tr>
+		{/volist}
+		</tbody>
+		</table>
+	</div>
+</div>
+{/block}

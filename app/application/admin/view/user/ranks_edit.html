@@ -1,0 +1,113 @@
+{extend name="index_layout"/}
+{block name="css"}
+<style>
+.goodsCat{display:inline-block;width:150px}
+</style>
+{/block}
+{block name="script"}
+<script src="__STATIC__/admin/js/ranks.js" type="text/javascript"></script>
+{/block}
+{block name="main"}
+<div class="layui-card">
+    <div class="layui-card-header">添加会员等级</div>
+    <div class="layui-card-body">
+         <input type="hidden" name="id" id="rankId" class="ipt" value="{$data['rankId']}" />
+        <form id="rankForm">
+            
+            <div class="layui-form-item">
+                <label class="layui-form-label">会员等级名称   </label>
+                <div class="layui-input-inline w300">
+                    <input type="text" name="rankName" id="rankName" placeholder="会员等级名称" class="ipt" value="{$data['rankName']}" />
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">会员等级Logo</label>
+                <div class="layui-input-inline w300">
+                    <button type="button" class="layui-btn layui-btn-primary pull-left" id="slide-pc-brand">选择图片</button>
+                    <input id="rankImg" name="rankImg" class="text ipt" data-target='#msg_rankImg' autocomplete="off" type="hidden" value="{$data['rankImg']}"/>
+                <span class='msg-box' id='msg_rankImg'></span>
+
+                </div>
+            </div>
+            <div class="layui-form-item">
+                  <label class="layui-form-label"></label>
+                  <div class="layui-input-inline w300">
+                    <div id="preview" >
+                        {if $data['rankId']!=0}
+                          <img src="{$data['rankImg']}" class="ipt" height='152'/>
+                        {/if}
+                    </div>
+                  </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">积分下限(大于或等于) </label>
+                <div class="layui-input-inline w300">
+                    <input type="text" name="startScore" id="startScore" placeholder="积分下限" class="ipt" value="{$data['startScore']}" />
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">积分上限(小于)</label>
+                <div class="layui-input-inline w300">
+                    <input type="text" name="endScore" id="endScore" placeholder="积分上限" class="ipt" value="{$data['endScore']}" />
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" type="submit">立即提交</button>
+                    <a class="layui-btn layui-btn-normal" href="javascript:;" onClick="javascript:history.go(-1);">返回</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+
+  layui.use('upload', function(){
+         var $ = layui.jquery;
+         var upload = layui.upload;            
+ upload.render({
+     elem: '#slide-pc-brand',
+     url: '/admin/goods/upload?dir=ranks',
+     size: 500,
+     exts: 'jpg|png|jpeg',
+     multiple: true,
+     before: function(obj) {
+         layer.msg('图片上传中...', {
+                icon: 16,
+                shade: 0.01,
+                time: 0
+            })
+     },
+     done: function(res) {
+        layer.close(layer.msg());
+         if(res.status == 0) {
+             return layer.msg(res.message);
+         }
+         $('#preview').html('<img width="150" height="150" src="'+res.filepath+'"  />');
+         $('#rankImg').val(res.filepath);
+     }
+ });
+});
+$(function(){
+  $('#rankForm').validator({
+        fields: {
+          rankName: {
+            tip: "请输入会员等级名称",
+            rule: '等级名称:required;length[~30];'
+          },
+          rankImg:{
+                  tip:"请上传会员等级图标",
+                  rule:"等级图标:required;",
+          }
+        },
+        valid: function(form){
+          var rankId = $('#rankId').val();
+          toEdits(rankId,{$p});
+        }
+  })
+});
+</script>
+{/block}
