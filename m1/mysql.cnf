@@ -1,0 +1,16 @@
+
+[client]
+default-character-set=utf8
+[mysqld]
+character-set-server=utf8
+default-storage-engine=InnoDB
+#表名不区分大小写
+lower_case_table_names=1
+#唯一标识
+server-id = 10
+log-bin=master-bin
+#忽略的库
+binlog-ignore-db=mysql,information_schema
+#自动删除5天以前
+expire_logs_days=5
+
